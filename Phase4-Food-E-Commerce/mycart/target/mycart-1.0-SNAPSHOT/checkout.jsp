@@ -76,7 +76,7 @@
 
                                 <div class="container text-center">
                                     <button class="btn btn-outline-success">Order Now</button>
-                                    <button class="btn btn-outline-primary">Continue Shopping</button>
+                                    
                                 </div>
 
                             </form>    

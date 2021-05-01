@@ -58,17 +58,8 @@
                 <!--first col-->
                 <div class="col-md-4">
 
-                    <!--first box-->
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <div class="container">
-                                <img style="max-width: 125px;" class="img-fluid rounded-circle" src="img/seo-and-web.png" alt="user_icon">
-
-                            </div> 
-                            <h1>2342</h1>
-                            <h1 class="text-uppercase text-muted">Users</h1>
-
-                        </div>
+               
+                     
 
                     </div>
 
@@ -81,21 +72,7 @@
                 <div class="col-md-4">
 
 
-                    <div class="card text-center">
-
-                        <div class="card-body">
-
-                            <div class="container">
-                                <img style="max-width: 125px;" class="img-fluid rounded-circle" src="img/list.png" alt="user_icon">
-
-                            </div> 
-
-                            <h1>23432</h1>
-                            <h1 class="text-uppercase text-muted">Categories</h1>
-
-                        </div>
-
-                    </div>
+                    
 
 
                 </div>
@@ -105,21 +82,7 @@
                 <div class="col-md-4">
 
 
-                    <div class="card">
-
-                        <div class="card-body text-center">
-
-                            <div class="container">
-                                <img style="max-width: 125px;" class="img-fluid rounded-circle" src="img/product.png" alt="user_icon">
-
-                            </div> 
-
-                            <h1>234</h1>
-                            <h1 class="text-uppercase text-muted">Products</h1>
-
-                        </div>
-
-                    </div>
+                    
 
 
                 </div>
