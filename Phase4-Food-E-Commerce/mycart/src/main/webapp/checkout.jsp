@@ -51,7 +51,7 @@
                         <div class="card-body">
 
                             <h3 class="text-center mb-5">Your details for order</h3>
-                            <form action="#!">
+                            <form action="ordernow.jsp">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
                                     <input value="<%= user.getUserEmail()%>" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
