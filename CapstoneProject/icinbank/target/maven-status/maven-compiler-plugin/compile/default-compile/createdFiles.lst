@@ -1,6 +1,4 @@
 com\learn\icinbank\helper\FactoryProvider.class
-com\learn\icinbank\helper\Helper.class
-com\learn\icinbank\entities\Transac.class
 com\learn\icinbank\entities\User.class
-com\learn\icinbank\entities\Useracc.class
-com\learn\icinbank\entities\Checkbook.class
+com\learn\icinbank\helper\Helper.class
+com\learn\icinbank\servlets\RegisterServlet.class

@@ -10,7 +10,8 @@
         <%@include file="components/common_css_js.jsp" %>
       
      </head>
-    <body>
+     <body>
+      
         <%@include file="components/navbar.jsp" %>
 <div style="background-color:#800000;color:white;padding:20px;">
     <br><br>
@@ -18,7 +19,7 @@
     <h1 style=font-size:95px><B>ICIN BANK</B></h1>
     <H2>We  Specialize In Customer Satisfaction</H2></center>
     
-   
+    <form action="register.jsp">
       <div class="wrap" style="width: 90%;   position: absolute;   top: 50%;   left: 50%;   transform: translate(-50%, -50%);">
    <div class="search" style="width: 100%;   position: relative;   display: flex;">
        
@@ -28,7 +29,7 @@
      </button>
      
    </div>
-</div>
+      </div></form>
     <br><br>  <br>   <br>     <br>
 </div> 
 <div  style="background-color:#ffffff">

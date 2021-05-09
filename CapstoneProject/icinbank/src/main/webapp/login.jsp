@@ -23,7 +23,7 @@
 
                     <div class="card mt-3">
 
-                        <div class="card-header custom-bg text-white">
+                        <div class="card-header text-white " style="background-color: #800000;">
                             <h3>Login here</h3>
                         </div>
 
@@ -39,10 +39,10 @@
                                     <label for="exampleInputPassword1">Password</label>
                                     <input  name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                                 </div>
-                                <a href="register.jsp" class="text-center d-block mb-2"> if not registered click here </a>
+                                <a href="register.jsp" class="text-center d-block mb-2" style="color:#800000"> If You Are A New User Click Me </a>
                                 <div class="container text-center"> 
 
-                                    <button type="submit" class="btn btn-primary border-0 custom-bg ">Submit</button>
+                                    <button type="submit" class="btn btn-primary border-0 " style="background:#800000">Submit</button>
                                     
                                 </div>
 

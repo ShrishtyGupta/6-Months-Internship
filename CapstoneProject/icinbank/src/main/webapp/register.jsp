@@ -12,9 +12,9 @@
         <title>New User Registration</title>
         <%@include file="components/common_css_js.jsp" %>
     </head>
-    <body>
+    <body style="background-color: #800000">
         <%@include  file="components/navbar.jsp" %>
-        <div class="container-fluid">
+        <div class="container-fluid" >
             <div class="row mt-3">
                 <div class="col-md-4 offset-md-4">                  
 
@@ -22,11 +22,11 @@
                         <%@include  file="message.jsp" %>                        
                         <div class="card-body px-5">
                             <div class="container text-center">
-                                <img src="img/add-friend.png"  style="max-width: 100px;" class="img-fluid" alt="user">
+                                <img src="img/seo-and-web.png"  style="max-width: 100px;" class="img-fluid" alt="user">
                             </div>
 
 
-                            <h3 class="text-center my-3">Sign up here !!</h3>
+                            <h3 class="text-center my-3">Subscribe To ICIN Here !!</h3>
 
                             <form action="RegisterServlet" method="post">
 
@@ -52,14 +52,15 @@
 
                                 <div class="form-group">
                                     <label for="phone">User Address</label>
-                                    <textarea name="user_address" style="height: 200px;" class="form-control" placeholder="Enter your address"></textarea>
+                                    <textarea name="user_address" style="height: 100px;" class="form-control" placeholder="Enter your address"></textarea>
 
 
                                 </div>
 
                                 <div class="container text-center"> 
-                                    <button class="btn btn-outline-success">Register</button>
-                                    <button class="btn btn-outline-warning">Reset</button>
+                                    <button class="btn " style="border-color: #800000; color:#fff; background-color:#800000; hover{background-color:#ffffff!important; color:#fff!important; cursor: pointer; }">
+                                        Register</button>
+                                    
 
                                 </div>
 
@@ -77,6 +78,7 @@
 
 
         </div>
+                        <br><br>
                         <%@include file="components/footer.jsp" %>
     </body>
 </html>
