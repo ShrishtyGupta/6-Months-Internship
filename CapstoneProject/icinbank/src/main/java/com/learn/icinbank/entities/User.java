@@ -31,8 +31,10 @@ public class User {
     
     @Column(name="user_type")
     private String userType;
+    @Column(name="user_status")
+    private String userStatus;
 
-    public User(int userId, String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType) {
+    public User(int userId, String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType, String userStatus) {
         this.userId = userId;
         this.userName = userName;
         this.userEmail = userEmail;
@@ -40,15 +42,18 @@ public class User {
         this.userPhone = userPhone;
         this.userAddress = userAddress;
         this.userType = userType;
+        this.userStatus = userStatus;
+        
     }
 
-    public User(String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType) {
+    public User(String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType,String userStatus) {
         this.userName = userName;
         this.userEmail = userEmail;
         this.userPassword = userPassword;
         this.userPhone = userPhone;
         this.userAddress = userAddress;
         this.userType = userType;
+        this.userStatus = userStatus;
     }
 
     public User() {
@@ -109,10 +114,18 @@ public class User {
     public void setUserType(String userType) {
         this.userType = userType;
     }
+    
+     public String getUserStatus() {
+        return userStatus;
+    }
+
+    public void setUserStatus(String userType) {
+        this.userStatus = userStatus;
+    }
 
     @Override
     public String toString() {
-        return "User{" + "userId=" + userId + ", userName=" + userName + ", userEmail=" + userEmail + ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userAddress=" + userAddress + ", userType=" + userType + '}';
+        return "User{" + "userId=" + userId + ", userName=" + userName + ", userEmail=" + userEmail + ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userAddress=" + userAddress + ", userType=" + userType + ", userStatus=" + userStatus +  '}';
     }
     
     
