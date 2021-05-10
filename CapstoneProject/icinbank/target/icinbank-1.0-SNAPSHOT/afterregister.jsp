@@ -1,8 +1,4 @@
-<%-- 
-    Document   : afterregister.jsp
-    Created on : May 9, 2021, 8:37:07 PM
-    Author     : hp
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

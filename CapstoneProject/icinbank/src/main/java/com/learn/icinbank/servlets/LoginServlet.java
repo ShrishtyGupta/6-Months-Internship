@@ -40,8 +40,8 @@ public class LoginServlet extends HttpServlet {
                 httpSession.setAttribute("current-user", user);
 
                 if (user.getUserType().equals("admin")) {
-                    //admin:-admin.jsp
-                    response.sendRedirect("admin.jsp");
+                    //admin:-adminservices.jsp
+                    response.sendRedirect("adminservices.jsp");
                 } else if (user.getUserType().equals("normal")) {
                     //normal :index.jsp
                     response.sendRedirect("userservices.jsp");
