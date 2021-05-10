@@ -52,7 +52,7 @@ else if (user1.getUserType().equals("normal")) {
       
       
       <li class="nav-item active">
-        <a class="nav-link" href="login.jsp">LOGOUT <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="LogoutServlet">LOGOUT <span class="sr-only">(current)</span></a>
       </li>
 
 
@@ -71,7 +71,7 @@ else if (user1.getUserType().equals("admin"))
       
       
       <li class="nav-item active">
-        <a class="nav-link" href="login.jsp">LOGOUT <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="LogoutServlet">LOGOUT <span class="sr-only">(current)</span></a>
       </li>
 <%
 }
