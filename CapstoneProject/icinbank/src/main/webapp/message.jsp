@@ -1,17 +1,24 @@
-<%-- 
-    Document   : message
-    Created on : May 9, 2021, 2:26:35 AM
-    Author     : hp
---%>
+<%
+    String message = (String) session.getAttribute("message");
+    if (message != null) {
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        
-    </body>
-</html>
+        //prints
+        // out.println(message);
+
+%>
+
+
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong><%= message%></strong> 
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button><br>
+</div>
+
+
+<%            session.removeAttribute("message");
+
+    }
+
+
+%>

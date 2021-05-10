@@ -30,8 +30,8 @@
                                 
                                 <br><br>
                                 <%
-    String message = (String) session.getAttribute("message");
-    if (message != null) {
+    String messagee = (String) session.getAttribute("message");
+    if (messagee != null) {
 
         //prints
         // out.println(message);
@@ -40,14 +40,14 @@
 
 
 <div class="alert alert-success alert-dismissible fade show" role="alert">
-    <strong><%= message%></strong> 
+    <strong><%= messagee%></strong> 
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button><br>
 </div>
 
 
-<%            session.removeAttribute("message");
+<%            session.removeAttribute("messagee");
 
     }
 

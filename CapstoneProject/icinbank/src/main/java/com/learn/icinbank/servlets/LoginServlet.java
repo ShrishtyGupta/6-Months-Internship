@@ -1,46 +1,57 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.learn.icinbank.servlets;
 
+import com.learn.icinbank.dao.UserDao;
+import com.learn.icinbank.entities.User;
+import com.learn.icinbank.helper.FactoryProvider;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-/**
- *
- * @author hp
- */
 public class LoginServlet extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet LoginServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+
+            //coding area
+            String email = request.getParameter("email");
+            String password = request.getParameter("password");
+
+            //validations
+            //authenticating user
+            UserDao userDao = new UserDao(FactoryProvider.getFactory());
+            User user = userDao.getUserByEmailAndPassword(email, password);
+
+            //System.out.println(user);
+            HttpSession httpSession = request.getSession();
+            if (user == null) {
+                httpSession.setAttribute("message", "Invalid Email ID or Password !!");
+                response.sendRedirect("login.jsp");
+                return;
+            } else {
+                out.println("<h1>Welcome " + user.getUserName() + " </h1>");
+
+                //login
+                httpSession.setAttribute("current-user", user);
+
+                if (user.getUserType().equals("admin")) {
+                    //admin:-admin.jsp
+                    response.sendRedirect("admin.jsp");
+                } else if (user.getUserType().equals("normal")) {
+                    //normal :index.jsp
+                    response.sendRedirect("userservices.jsp");
+                }else
+                {
+                    out.println("We have not identified user type");
+                }
+
+            }
+
         }
     }
 
