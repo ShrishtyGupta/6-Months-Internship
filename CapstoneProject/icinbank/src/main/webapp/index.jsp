@@ -13,7 +13,7 @@
      <body>
       
         <%@include file="components/navbar.jsp" %>
-<div style="background-color:#4b4a67;color:white;padding:20px;">
+<div style="background-color:#0b2239;color:white;padding:20px;">
     <br><br>
     <center>
     <h1 style=font-size:95px><B>ICIN BANK</B></h1>
@@ -34,11 +34,11 @@
 </div> 
 <div  style="background-color:#ffffff">
        <br><br>  <br>   <br>
-       <h2 style="color: #4b4a67">
+       <h2 style="color: #0b2239">
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            ICIN BANK</h2><br><br>
        <div class="clearfix" style="padding-left:80px; padding-right:80px; text-align: justify">
-        <img class="indeximg" src="img/BAR2.png" style="float:right; width:30%" /> 
+        <img class="indeximg" src="img/bar4.png" style="float:right; width:30%" /> 
        We are third largest private sector bank in India offering entire spectrum of financial services for personal & corporate banking.
        ICIN Bank Limited is an Indian private sector bank headquartered in Mumbai, Maharashtra. It sells financial services to large and mid-size companies, SMEs and retail businesses.
        The bank was founded in December 1993 as UTI Bank, opening its registered office in Ahmedabad and a corporate office in Mumbai.[11] The bank was promoted jointly by the Administrator of the Unit Trust of India (UTI),[12] Life Insurance Corporation of India (LIC), General Insurance Corporation, National Insurance Company, The New India Assurance Company, The Oriental Insurance Corporation and United India Insurance Company. The first branch was inaugurated on 2 April 1994 in Ahmedabad by Manmohan Singh, then finance minister of India

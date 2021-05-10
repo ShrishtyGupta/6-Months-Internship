@@ -12,7 +12,7 @@
         <title>New User Registration</title>
         <%@include file="components/common_css_js.jsp" %>
     </head>
-    <body style="background-color: #484a67">
+    <body style="background-color: #0b2239">
         <%@include  file="components/navbar.jsp" %><br>
         <div class="container-fluid" >
             <div class="row mt-3">
@@ -58,7 +58,7 @@
                                 </div>
 
                                 <div class="container text-center"> 
-                                    <button class="btn " style="border-color: #4b4a67; color:#fff; background-color:#4b4a67; hover{background-color:#ffffff!important; color:#fff!important; cursor: pointer; }">
+                                    <button class="btn " style="border-color: #0b2239; color:#fff; background-color:#0b2239; hover{background-color:#ffffff!important; color:#fff!important; cursor: pointer; }">
                                         Register</button>
                                     
 

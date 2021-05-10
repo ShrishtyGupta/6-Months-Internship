@@ -12,8 +12,8 @@
         <title> Services </title>
         <%@include file="components/common_css_js.jsp" %>
     </head>
-    <body style="background: #4B4A67">
-        <%@include file="components/navbar.jsp" %><br><br><br>
+    <body style="background: #0b2239">
+        <%@include file="components/navbar.jsp" %><br><br>
       
         <div class="container admin">
 
@@ -154,9 +154,9 @@
         <div class="modal fade" id="add-category-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
-                    <div class="modal-header custom-bg text-white">
+                    <div class="modal-header text-white" style="background: #0b2239">
                         <h5 class="modal-title" id="exampleModalLabel">Login to Avail Service</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" style="color: #fff" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -172,11 +172,11 @@
                                     <label for="exampleInputPassword1">Password</label>
                                     <input  name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                                 </div>
-<a href="register.jsp" class="text-center d-block mb-2" style="color:#4b4a67"> If You Are A New User Click Me </a>
+<a href="register.jsp" class="text-center d-block mb-2" style="color:#0b2239"> If You Are A New User Click Me </a>
                                 
                             <div class="cotnainer text-center">
 
-                                <button type="submit" class="btn btn-primary border-0 " style="background:#4b4a67">Login</button>
+                                <button type="submit" class="btn btn-primary border-0 " style="background:#0b2239">Login</button>
                                     
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
@@ -201,7 +201,7 @@
         <!--End modal-->
 
         
-        <br><br><br><br>
+        <br><br><br>
           <%@include file="components/footer_1.jsp" %>
     </body>
 </html>

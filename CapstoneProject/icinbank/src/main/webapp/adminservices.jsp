@@ -32,7 +32,7 @@
         <title> Admin - Services </title>
         <%@include file="components/common_css_js.jsp" %>
     </head>
-    <body style="background: #4b4a67">
+    <body style="background: #0b2239">
         <%@include file="components/navbar.jsp" %><br><br><br><br>
       
         <div class="container admin">

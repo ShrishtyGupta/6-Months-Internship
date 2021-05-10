@@ -23,11 +23,11 @@
 
                     <div class="card mt-3">
 
-                        <div class="card-header text-white " style="background-color: #4b4a67;">
+                        <div class="card-header text-white " style="background-color: #0b2239;">
                             <h3>Login here</h3>
                         </div>
 
-                        <div class="card-body">                            
+                        <div class="card-body" style="background-color: #ddd1c7">                            
                             <%@include file="message.jsp" %>
                             <form action="LoginServlet" method="post">
                                 <div class="form-group">
@@ -39,10 +39,10 @@
                                     <label for="exampleInputPassword1">Password</label>
                                     <input  name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                                 </div>
-                                <a href="register.jsp" class="text-center d-block mb-2" style="color:#4b4a67"> If You Are A New User Click Me </a>
+                                <a href="register.jsp" class="text-center d-block mb-2" style="color:#0b2239"> If You Are A New User Click Me </a>
                                 <div class="container text-center"> 
 
-                                    <button type="submit" class="btn btn-primary border-0 " style="background:#484a67">Submit</button>
+                                    <button type="submit" class="btn btn-primary border-0 " style="background:#0b2239">Submit</button>
                                     
                                 </div>
 
