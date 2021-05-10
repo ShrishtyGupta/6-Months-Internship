@@ -12,8 +12,8 @@
         <title>New User Registration</title>
         <%@include file="components/common_css_js.jsp" %>
     </head>
-    <body style="background-color: #800000">
-        <%@include  file="components/navbar.jsp" %>
+    <body style="background-color: #484a67">
+        <%@include  file="components/navbar.jsp" %><br>
         <div class="container-fluid" >
             <div class="row mt-3">
                 <div class="col-md-4 offset-md-4">                  
@@ -52,13 +52,13 @@
 
                                 <div class="form-group">
                                     <label for="phone">User Address</label>
-                                    <textarea name="user_address" style="height: 100px;" class="form-control" placeholder="Enter your address"></textarea>
+                                    <textarea name="user_address" style="height: 50px;" class="form-control" placeholder="Enter your address"></textarea>
 
 
                                 </div>
 
                                 <div class="container text-center"> 
-                                    <button class="btn " style="border-color: #800000; color:#fff; background-color:#800000; hover{background-color:#ffffff!important; color:#fff!important; cursor: pointer; }">
+                                    <button class="btn " style="border-color: #4b4a67; color:#fff; background-color:#4b4a67; hover{background-color:#ffffff!important; color:#fff!important; cursor: pointer; }">
                                         Register</button>
                                     
 
@@ -79,6 +79,6 @@
 
         </div>
                         <br><br>
-                        <%@include file="components/footer.jsp" %>
+                        <%@include file="components/footer_1.jsp" %>
     </body>
 </html>

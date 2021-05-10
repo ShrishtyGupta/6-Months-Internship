@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-bg" ">
+<nav class="navbar navbar-expand-lg navbar-dark  " style="background: #4b4a67" >
     <div class ="container" >
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent" >

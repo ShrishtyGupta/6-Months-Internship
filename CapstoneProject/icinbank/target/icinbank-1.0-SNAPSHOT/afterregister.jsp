@@ -8,15 +8,15 @@
         <title>Registered Successfully</title>
          <%@include file="components/common_css_js.jsp" %>
     </head>
-    <body style="background: #800000">
+    <body style="background: #4b4a67">
         <%@include  file="components/navbar.jsp" %>
-        <br><br>
+        <br><br><br>
         
          <div class="container" style="padding-left:170px; padding-right: 40px"> 
           
                
 
-                    <div class="card mt-3" style="height: 400px ;width:750px; text-align: center">
+                    <div class="card mt-3" style="height: 370px ;width:750px; text-align: center">
 
                         
 
@@ -49,14 +49,13 @@
 
 
 %>
-                                <h3 style="color:black"> You Have Been Registered Successfully!<br>
-                                    Press The Button & Move to Login Window!</h3> <br> <br> 
+                                <h4 style="color:black"> You Have Been Registered Successfully!<br>
+                                    Press The Button & Move to Login Window!</h4> <br> <br> 
                                 <div class="container text-center" > 
 
-                                    <button type="submit" class="btn btn-primary border-0 " style="background:#800000">Login Window</button>
+                                    <button type="submit" class="btn btn-primary border-0 " style="background:#4b4a67">Login Window</button>
                                     <br>
-                                    <br>
-                                </div>
+                                                                    </div>
 
                             </form>
 
@@ -74,6 +73,6 @@
         
                                 <br><br><br>
         
-         <%@include file="components/footer.jsp" %>
+         <%@include file="components/footer_1.jsp" %>
     </body>
 </html>

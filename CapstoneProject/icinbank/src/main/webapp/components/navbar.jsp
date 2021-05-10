@@ -7,7 +7,7 @@
     
 %>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-bg" >
+<nav class="navbar navbar-expand-lg navbar-light bg-light  " style="background: #4b4a67" >
     <div class ="container" ><a class="navbar-brand" href="index.jsp">I C I N   &nbsp;&nbsp; B A N K</a>
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -12,7 +12,7 @@
         <title> Services </title>
         <%@include file="components/common_css_js.jsp" %>
     </head>
-    <body style="background: #800000">
+    <body style="background: #4B4A67">
         <%@include file="components/navbar.jsp" %><br><br><br>
       
         <div class="container admin">
@@ -172,11 +172,11 @@
                                     <label for="exampleInputPassword1">Password</label>
                                     <input  name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                                 </div>
-<a href="register.jsp" class="text-center d-block mb-2" style="color:#800000"> If You Are A New User Click Me </a>
+<a href="register.jsp" class="text-center d-block mb-2" style="color:#4b4a67"> If You Are A New User Click Me </a>
                                 
                             <div class="cotnainer text-center">
 
-                                <button type="submit" class="btn btn-primary border-0 " style="background:#800000">Login</button>
+                                <button type="submit" class="btn btn-primary border-0 " style="background:#4b4a67">Login</button>
                                     
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
@@ -202,6 +202,6 @@
 
         
         <br><br><br><br>
-          <%@include file="components/footer.jsp" %>
+          <%@include file="components/footer_1.jsp" %>
     </body>
 </html>

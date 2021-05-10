@@ -12,7 +12,7 @@
         <title> User - Services </title>
         <%@include file="components/common_css_js.jsp" %>
     </head>
-    <body style="background: #800000">
+    <body style="background: #4b4a67">
         <%@include file="components/navbar.jsp" %><br><br><br>
       
         <div class="container admin">
@@ -311,6 +311,6 @@
             </div>
         </div>
         <br><br><br><br>
-          <%@include file="components/footer.jsp" %>
+          <%@include file="components/footer_1.jsp" %>
     </body>
 </html>
