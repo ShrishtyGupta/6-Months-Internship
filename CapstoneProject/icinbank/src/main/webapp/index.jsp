@@ -11,7 +11,8 @@
       
      </head>
      <body>
-      
+        
+             
         <%@include file="components/navbar.jsp" %>
 <div style="background-color:#0b2239;color:white;padding:20px;">
     <br><br>

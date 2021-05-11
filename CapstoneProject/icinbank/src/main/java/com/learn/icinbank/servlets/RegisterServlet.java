@@ -1,6 +1,10 @@
 package com.learn.icinbank.servlets;
 
+import java.util.Date;
 import com.learn.icinbank.entities.User;
+import com.learn.icinbank.entities.Cheq;
+import com.learn.icinbank.entities.Acc;
+import com.learn.icinbank.entities.Trans;
 import com.learn.icinbank.helper.FactoryProvider;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -34,14 +38,23 @@ public class RegisterServlet extends HttpServlet {
                     return;
                 }
                 //creating user object to store data
-                User user = new User(userName, userEmail, userPassword, userPhone, userAddress, "normal", "1");
+                
+                User user = new User(userName, userEmail, userPassword, userPhone, userAddress, "normal", true);
+                java.util.Date date=new java.util.Date();  
+                Cheq cheqq = new Cheq(false, user); 
+                Acc accss = new Acc(0,user,false);
+                Trans transs = new Trans(0,date,"AccountInitialised","AccountInitialised",user,true );
                 Session hibernateSession = FactoryProvider.getFactory().openSession();
                 Transaction tx = hibernateSession.beginTransaction();                
-                int userId = (int) hibernateSession.save(user);                
+                int userId = (int) hibernateSession.save(user);
+                int cheqId = (int) hibernateSession.save(cheqq);
+                int accId = (int) hibernateSession.save(accss);
+                int transId = (int) hibernateSession.save(transs);
                 tx.commit();
                 hibernateSession.close();                
                 HttpSession httpSession = request.getSession();
-                httpSession.setAttribute("message", " Your Unique User ID is " + userId);                
+                httpSession.setAttribute("message", " Your Unique User ID is " + userId + "!! Your Account Number is " + accId );    
+              
                 response.sendRedirect("afterregister.jsp");
                 return;
                 

@@ -60,7 +60,7 @@
                         <div class="card-body text-center">
 
                             <div class="container">
-                                <img style="max-width: 125px;" class="img-fluid rounded-circle" src="img/social.png" alt="user_icon">
+                                <img style="max-width: 125px;" class="img-fluid  " src="img/social.png" alt="user_icon">
 
                             </div> 
 
@@ -81,7 +81,7 @@
                         <div class="card-body text-center">
 
                             <div class="container">
-                                <img style="max-width: 125px;" class="img-fluid rounded-circle" src="img/product.png" alt="user_icon">
+                                <img style="max-width: 125px;" class="img-fluid  " src="img/product.png" alt="user_icon">
 
                             </div> 
 

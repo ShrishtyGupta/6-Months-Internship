@@ -34,7 +34,7 @@
                     <div class="card" data-toggle="modal" data-target="#add-category-modal">
                         <div class="card-body text-center">
                             <div class="container">
-                                <img style="max-width: 125px;" class="img-fluid rounded-circle" src="img/social.png" alt="user_icon">
+                                <img style="max-width: 125px;" class="img-fluid " src="img/social.png" alt="user_icon">
 
                             </div> 
                           
@@ -58,7 +58,7 @@
                         <div class="card-body text-center">
 
                             <div class="container">
-                                <img style="max-width: 125px;" class="img-fluid rounded-circle" src="img/product.png" alt="user_icon">
+                                <img style="max-width: 125px;" class="img-fluid " src="img/product.png" alt="user_icon">
 
                             </div> 
 
@@ -82,7 +82,7 @@
                         <div class="card-body text-center">
 
                             <div class="container">
-                                <img style="max-width: 125px;" class="img-fluid rounded-circle" src="img/add-friend.png" alt="user_icon">
+                                <img style="max-width: 125px;" class="img-fluid " src="img/add-friend.png" alt="user_icon">
                             </div> 
                             <h1 class="text-uppercase text-muted">transfer money</h1>
                         </div>
@@ -102,7 +102,7 @@
                         <div class="card-body text-center">
 
                             <div class="container">
-                                <img style="max-width: 125px;" class="img-fluid rounded-circle" src="img/minus.png" alt="user_icon">
+                                <img style="max-width: 125px;" class="img-fluid " src="img/minus.png" alt="user_icon">
 
                             </div> 
 
@@ -123,11 +123,11 @@
                         <div class="card-body text-center">
 
                             <div class="container">
-                                <img style="max-width: 125px;" class="img-fluid rounded-circle" src="img/keys.png" alt="user_icon">
+                                <img style="max-width: 125px;" class="img-fluid " src="img/keys.png" alt="user_icon">
 
                             </div> 
 
-                            <p class="mt-2">Click here to Withdraw Money </p>
+                            <p class="mt-2">Click here to Check Balance Sheet </p>
                             <h1 class="text-uppercase text-muted">balance sheet</h1>
 
                         </div>

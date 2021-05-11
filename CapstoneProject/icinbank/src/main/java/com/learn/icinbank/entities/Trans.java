@@ -4,129 +4,119 @@
  * and open the template in the editor.
  */
 package com.learn.icinbank.entities;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
-public class User {
-    @Id
+public class Trans {
+   @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(length = 10, name = "user_id")
-    private int userId;
-    @Column(length = 100, name = "user_name")
-    private String userName;
-    @Column(length = 100, name = "user_email")
-    private String userEmail;
-    @Column(length = 100, name = "user_password")
-    private String userPassword;
-    @Column(length = 12, name = "user_phone")
-    private String userPhone;
-    
-    @Column(length = 1500, name = "user_address")
-    private String userAddress;
-    
-    @Column(name="user_type")
-    private String userType;
-    @Column(name="user_status")
-    private String userStatus;
+    @Column(length = 10, name = "trans_id")
+    private int transId;
+   @Column(length = 10, name = "trans_Amt")
+    private int transAmt;
+    @Column( name = "trans_Date")
+    private java.util.Date transDate;
+    @Column(length = 100, name = "acc_tobank")
+    private String accTobank;
+     @Column(length = 100, name = "acc_toacc")
+    private String accToacc;
+    @ManyToOne
+    private User transt;
 
-    public User(int userId, String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType, String userStatus) {
-        this.userId = userId;
-        this.userName = userName;
-        this.userEmail = userEmail;
-        this.userPassword = userPassword;
-        this.userPhone = userPhone;
-        this.userAddress = userAddress;
-        this.userType = userType;
-        this.userStatus = userStatus;
-        
+    @Column(name="trans_status")
+    private boolean transStatus;
+
+    public Trans(int transId, int transAmt, Date transDate, String accTobank, String accToacc, User transt, boolean transStatus) {
+        this.transId = transId;
+        this.transAmt = transAmt;
+        this.transDate = transDate;
+        this.accTobank = accTobank;
+        this.accToacc = accToacc;
+        this.transt = transt;
+        this.transStatus = transStatus;
     }
 
-    public User(String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType,String userStatus) {
-        this.userName = userName;
-        this.userEmail = userEmail;
-        this.userPassword = userPassword;
-        this.userPhone = userPhone;
-        this.userAddress = userAddress;
-        this.userType = userType;
-        this.userStatus = userStatus;
+    public Trans() {
     }
 
-    public User() {
+    public Trans(int transAmt, Date transDate, String accTobank, String accToacc, User transt, boolean transStatus) {
+        this.transAmt = transAmt;
+        this.transDate = transDate;
+        this.accTobank = accTobank;
+        this.accToacc = accToacc;
+        this.transt = transt;
+        this.transStatus = transStatus;
     }
 
-    public int getUserId() {
-        return userId;
+    public int getTransId() {
+        return transId;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setTransId(int transId) {
+        this.transId = transId;
     }
 
-    public String getUserName() {
-        return userName;
+    public int getTransAmt() {
+        return transAmt;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setTransAmt(int transAmt) {
+        this.transAmt = transAmt;
     }
 
-    public String getUserEmail() {
-        return userEmail;
+    public Date getTransDate() {
+        return transDate;
     }
 
-    public void setUserEmail(String userEmail) {
-        this.userEmail = userEmail;
+    public void setTransDate(Date transDate) {
+        this.transDate = transDate;
     }
 
-    public String getUserPassword() {
-        return userPassword;
+    public String getAccTobank() {
+        return accTobank;
     }
 
-    public void setUserPassword(String userPassword) {
-        this.userPassword = userPassword;
+    public void setAccTobank(String accTobank) {
+        this.accTobank = accTobank;
     }
 
-    public String getUserPhone() {
-        return userPhone;
+    public String getAccToacc() {
+        return accToacc;
     }
 
-    public void setUserPhone(String userPhone) {
-        this.userPhone = userPhone;
+    public void setAccToacc(String accToacc) {
+        this.accToacc = accToacc;
     }
 
-    public String getUserAddress() {
-        return userAddress;
+    public User getTranst() {
+        return transt;
     }
 
-    public void setUserAddress(String userAddress) {
-        this.userAddress = userAddress;
+    public void setTranst(User transt) {
+        this.transt = transt;
     }
 
-    public String getUserType() {
-        return userType;
+    public boolean isTransStatus() {
+        return transStatus;
     }
 
-    public void setUserType(String userType) {
-        this.userType = userType;
-    }
-    
-     public String getUserStatus() {
-        return userStatus;
-    }
-
-    public void setUserStatus(String userType) {
-        this.userStatus = userStatus;
+    public void setTransStatus(boolean transStatus) {
+        this.transStatus = transStatus;
     }
 
     @Override
     public String toString() {
-        return "User{" + "userId=" + userId + ", userName=" + userName + ", userEmail=" + userEmail + ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userAddress=" + userAddress + ", userType=" + userType + ", userStatus=" + userStatus +  '}';
+        return "Trans{" + "transId=" + transId + ", transAmt=" + transAmt + ", transDate=" + transDate + ", accTobank=" + accTobank + ", accToacc=" + accToacc + ", transt=" + transt + ", transStatus=" + transStatus + '}';
     }
+
+    
     
     
     

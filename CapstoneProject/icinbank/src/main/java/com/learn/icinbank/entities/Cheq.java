@@ -10,123 +10,62 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
-public class User {
+public class Cheq {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(length = 10, name = "user_id")
-    private int userId;
-    @Column(length = 100, name = "user_name")
-    private String userName;
-    @Column(length = 100, name = "user_email")
-    private String userEmail;
-    @Column(length = 100, name = "user_password")
-    private String userPassword;
-    @Column(length = 12, name = "user_phone")
-    private String userPhone;
-    
-    @Column(length = 1500, name = "user_address")
-    private String userAddress;
-    
-    @Column(name="user_type")
-    private String userType;
-    @Column(name="user_status")
-    private String userStatus;
+    @Column(length = 10, name = "cheq_id")
+    private int cheqId;
+   @Column(name="cheq_status")
+    private boolean cheqStatus;
+    @ManyToOne
+    private User cheqt;
 
-    public User(int userId, String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType, String userStatus) {
-        this.userId = userId;
-        this.userName = userName;
-        this.userEmail = userEmail;
-        this.userPassword = userPassword;
-        this.userPhone = userPhone;
-        this.userAddress = userAddress;
-        this.userType = userType;
-        this.userStatus = userStatus;
-        
+    public Cheq(int cheqId, boolean cheqStatus, User cheqt) {
+        this.cheqId = cheqId;
+        this.cheqStatus = cheqStatus;
+        this.cheqt = cheqt;
     }
 
-    public User(String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType,String userStatus) {
-        this.userName = userName;
-        this.userEmail = userEmail;
-        this.userPassword = userPassword;
-        this.userPhone = userPhone;
-        this.userAddress = userAddress;
-        this.userType = userType;
-        this.userStatus = userStatus;
+    public Cheq(boolean cheqStatus, User cheqt) {
+        this.cheqStatus = cheqStatus;
+        this.cheqt = cheqt;
     }
 
-    public User() {
+    public int getCheqId() {
+        return cheqId;
     }
 
-    public int getUserId() {
-        return userId;
+    public void setCheqId(int cheqId) {
+        this.cheqId = cheqId;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public boolean isCheqStatus() {
+        return cheqStatus;
     }
 
-    public String getUserName() {
-        return userName;
+    public void setCheqStatus(boolean cheqStatus) {
+        this.cheqStatus = cheqStatus;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public User getCheqt() {
+        return cheqt;
     }
 
-    public String getUserEmail() {
-        return userEmail;
-    }
-
-    public void setUserEmail(String userEmail) {
-        this.userEmail = userEmail;
-    }
-
-    public String getUserPassword() {
-        return userPassword;
-    }
-
-    public void setUserPassword(String userPassword) {
-        this.userPassword = userPassword;
-    }
-
-    public String getUserPhone() {
-        return userPhone;
-    }
-
-    public void setUserPhone(String userPhone) {
-        this.userPhone = userPhone;
-    }
-
-    public String getUserAddress() {
-        return userAddress;
-    }
-
-    public void setUserAddress(String userAddress) {
-        this.userAddress = userAddress;
-    }
-
-    public String getUserType() {
-        return userType;
-    }
-
-    public void setUserType(String userType) {
-        this.userType = userType;
-    }
-    
-     public String getUserStatus() {
-        return userStatus;
-    }
-
-    public void setUserStatus(String userType) {
-        this.userStatus = userStatus;
+    public void setCheqt(User cheqt) {
+        this.cheqt = cheqt;
     }
 
     @Override
     public String toString() {
-        return "User{" + "userId=" + userId + ", userName=" + userName + ", userEmail=" + userEmail + ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userAddress=" + userAddress + ", userType=" + userType + ", userStatus=" + userStatus +  '}';
+        return "Cheq{" + "cheqId=" + cheqId + ", cheqStatus=" + cheqStatus + ", cheqt=" + cheqt + '}';
     }
+
+    
+
+    
     
     
     
