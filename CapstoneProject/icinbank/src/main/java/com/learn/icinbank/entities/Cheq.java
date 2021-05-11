@@ -22,16 +22,56 @@ public class Cheq {
     private boolean cheqStatus;
     @ManyToOne
     private User cheqt;
+    @Column(name="cheq_add")
+    private String cheqAdd;
+    @Column(name="cheq_connum")
+    private String cheqConnum;
 
-    public Cheq(int cheqId, boolean cheqStatus, User cheqt) {
+    public Cheq(int cheqId, boolean cheqStatus, User cheqt,String cheqAdd) {
         this.cheqId = cheqId;
         this.cheqStatus = cheqStatus;
         this.cheqt = cheqt;
+         this.cheqAdd = cheqAdd;
     }
 
-    public Cheq(boolean cheqStatus, User cheqt) {
+    public Cheq() {
+    }
+
+    public Cheq(boolean cheqStatus, User cheqt,String cheqAdd) {
         this.cheqStatus = cheqStatus;
         this.cheqt = cheqt;
+        this.cheqAdd = cheqAdd;
+    }
+
+    public String getCheqConnum() {
+        return cheqConnum;
+    }
+
+    public Cheq(boolean cheqStatus, User cheqt, String cheqAdd, String cheqConnum) {
+        this.cheqStatus = cheqStatus;
+        this.cheqt = cheqt;
+        this.cheqAdd = cheqAdd;
+        this.cheqConnum = cheqConnum;
+    }
+
+    public void setCheqConnum(String cheqConnum) {
+        this.cheqConnum = cheqConnum;
+    }
+
+    public Cheq(int cheqId, boolean cheqStatus, User cheqt, String cheqAdd, String cheqConnum) {
+        this.cheqId = cheqId;
+        this.cheqStatus = cheqStatus;
+        this.cheqt = cheqt;
+        this.cheqAdd = cheqAdd;
+        this.cheqConnum = cheqConnum;
+    }
+
+    public String getCheqAdd() {
+        return cheqAdd;
+    }
+
+    public void setCheqAdd(String cheqAdd) {
+        this.cheqAdd = cheqAdd;
     }
 
     public int getCheqId() {
@@ -60,9 +100,12 @@ public class Cheq {
 
     @Override
     public String toString() {
-        return "Cheq{" + "cheqId=" + cheqId + ", cheqStatus=" + cheqStatus + ", cheqt=" + cheqt + '}';
+        return "Cheq{" + "cheqId=" + cheqId + ", cheqStatus=" + cheqStatus + ", cheqt=" + cheqt + ", cheqAdd=" + cheqAdd + ", cheqConnum=" + cheqConnum + '}';
     }
 
+  
+
+    
     
 
     

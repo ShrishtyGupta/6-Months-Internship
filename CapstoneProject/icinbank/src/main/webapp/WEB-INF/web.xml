@@ -16,6 +16,10 @@
         <servlet-name>LogoutServlet</servlet-name>
         <servlet-class>com.learn.icinbank.servlets.LogoutServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ReqChServlet</servlet-name>
+        <servlet-class>com.learn.icinbank.servlets.ReqChServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>register</servlet-name>
         <url-pattern>/register</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReqChServlet</servlet-name>
+        <url-pattern>/ReqChServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

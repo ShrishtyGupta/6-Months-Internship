@@ -42,5 +42,12 @@ public class UserDao {
         return user;
     }
     
+    public User getUserById(int uid)
+    {
+    Session session=this.factory.openSession();
+    User u = session.get(User.class,uid);
+    session.close();
+    return u;
+    }
     
 }

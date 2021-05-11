@@ -53,10 +53,10 @@
 
                 <div class="col-md-4">
 
+                    <a href="cheqbook.jsp">
+                    <div class="card text-center"               >
 
-                    <div class="card text-center">
-
-                        <div class="card-body">
+                        <div class="card-body" >
 
                             <div class="container">
                                 <img style="max-width: 125px;" class="img-fluid  " src="img/product.png" alt="user_icon">
@@ -64,11 +64,12 @@
                             </div> 
 
                             
-                            <h1 class="text-uppercase text-muted">request checkbook</h1>
+                            <h1 class="text-uppercase text-muted">checkbook services
+                            </h1>
 
                         </div>
 
-                    </div>
+                    </div></a>
 
 
                 </div>
@@ -77,7 +78,7 @@
                 <!--third col-->
                 <div class="col-md-4">
 
-
+ <a href="transfermoney.jsp">
                     <div class="card">
 
                         <div class="card-body text-center">
@@ -93,6 +94,7 @@
                         </div>
 
                     </div>
+ </a>
 
 
                 </div>

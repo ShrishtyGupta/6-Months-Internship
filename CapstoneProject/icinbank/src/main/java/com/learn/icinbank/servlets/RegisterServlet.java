@@ -41,7 +41,7 @@ public class RegisterServlet extends HttpServlet {
                 
                 User user = new User(userName, userEmail, userPassword, userPhone, userAddress, "normal", true);
                 java.util.Date date=new java.util.Date();  
-                Cheq cheqq = new Cheq(false, user); 
+                Cheq cheqq = new Cheq(false, user,userAddress,userPhone); 
                 Acc accss = new Acc(0,user,false);
                 Trans transs = new Trans(0,date,"AccountInitialised","AccountInitialised",user,true );
                 Session hibernateSession = FactoryProvider.getFactory().openSession();

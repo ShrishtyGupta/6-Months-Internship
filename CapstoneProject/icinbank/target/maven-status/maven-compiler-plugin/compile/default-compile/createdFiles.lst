@@ -1,4 +1,3 @@
-com\learn\icinbank\entities\Cheq.class
 com\learn\icinbank\entities\Trans.class
 com\learn\icinbank\helper\FactoryProvider.class
 com\learn\icinbank\entities\Acc.class
@@ -6,5 +5,8 @@ com\learn\icinbank\helper\Helper.class
 com\learn\icinbank\servlets\RegisterServlet.class
 com\learn\icinbank\servlets\LoginServlet.class
 com\learn\icinbank\servlets\LogoutServlet.class
+com\learn\icinbank\entities\Cheq.class
+com\learn\icinbank\servlets\ReqChServlet.class
 com\learn\icinbank\entities\User.class
+com\learn\icinbank\dao\ReqCheqDao.class
 com\learn\icinbank\dao\UserDao.class

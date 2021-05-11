@@ -44,6 +44,21 @@ public class User {
       @OneToMany(mappedBy="transt")
     private List<Trans> transs = new ArrayList<>();
 
+    public User(int userId) {
+        this.userId = userId;
+    }
+
+    public User(int userId, String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType, boolean userStatus) {
+        this.userId = userId;
+        this.userName = userName;
+        this.userEmail = userEmail;
+        this.userPassword = userPassword;
+        this.userPhone = userPhone;
+        this.userAddress = userAddress;
+        this.userType = userType;
+        this.userStatus = userStatus;
+    }
+
     public User( String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType, boolean userStatus) {
         
         this.userName = userName;
