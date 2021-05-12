@@ -27,6 +27,14 @@
     </head>
     <body style="background: #0b2239">
         <%@include file="components/navbar.jsp" %>
+         <%
+                                                ReqCheqDao dao=new ReqCheqDao(FactoryProvider.getFactory());
+                                                List<Cheq> list = dao.getAllCheq();
+          %>
+          <%  int cunt=0;
+                                                    for(Cheq cheq:list)
+                                                {    if(cheq.getCheqt().getUserId()==1)
+                                                {  cunt++;}}%>
         <div class="container">
             <div class="row mt-5">                
 
@@ -68,26 +76,62 @@
                         </div>
                     </div>
                 </div>
-                                     <%
-                                                ReqCheqDao dao=new ReqCheqDao(FactoryProvider.getFactory());
-                                                List<Cheq> list = dao.getAllCheq();
-                                                %>
+                                    
                                     
                                     <div class="col-md-7">
                                         <div class="card">
-                                            <br>
-                                            <h3 class="text-center mb-5" style="padding-top:15px">Checkbook Status Sheet</h3>
-                                            <div>
-                                                <h1>Number of checkbook is <%=list.size()%> </h1> 
-                                                <% for(Cheq cheq:list)
+                                            <div class="card-body">
+                                                <div class="form-group" style="padding-left: 30px; padding-right: 30px">
+                                            
+                                            <h3 class="text-center " >Checkbook Status Sheet</h3>
+                                            <small id="emailHelp" class="form-text text-muted text-center">You have <%=cunt%> checkbooks </small><br>
+                                         
+                                                
+                                                
+                                               <table class="table">
+                                                <thead  style="background:#0b2239; color:#fff">   
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                     <th scope="col"> Checkbook ID</th>
+                                                    <th scope="col">Status</th>
+                                                     <th scope="col">Address</th>
+                                                </tr>    
+                                                </thead>
+                                               
+                                                <tbody>              
+                                                <%  int count=0;
+                                                String s;
+                                                    for(Cheq cheq:list)
                                                 {    if(cheq.getCheqt().getUserId()==1)
-                                                {out.println(cheq.getCheqId()+cheq.getCheqAdd()+cheq.isCheqStatus()+cheq.getCheqt().getUserId()+"<br>");
-                                                } }
+                                                {  count++;
+                                                %>
+                                                <tr>
+                                                    <td><%=count%></td>
+                                                    <% if(cheq.isCheqStatus()==false)
+                                                       s= "In Process";
+                                                    else s="Issued";
                                                     %>
-                                            </div>
-                                            <div class="card-body"></div>
-                                        </div></div>
-            </div>
+                                                    <td><%=cheq.getCheqId()%> </td>
+                                                    <td><%=s%> </td>
+                                                    <td><%=cheq.getCheqt().getUserId()%> </td>
+                                                    
+                                                </tr>
+                                              
+                                                
+                                              <%  } }
+                                                    %>
+                                                </tbody>
+                                                
+                                                
+                                               </table>
+                                                    
+                                              
+                                                                                                                                         
+                                                
+                                            
+                                            
+                                        
+                                            </div></div></div></div></div>
 
         </div><br><br>
         <%@include file="components/footer_1.jsp" %>
