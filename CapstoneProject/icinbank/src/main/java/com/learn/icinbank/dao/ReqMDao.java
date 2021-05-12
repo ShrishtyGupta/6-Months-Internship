@@ -5,10 +5,13 @@
  */
 package com.learn.icinbank.dao;
 
+import com.learn.icinbank.entities.Cheq;
 import com.learn.icinbank.entities.Trans;
+import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 /**
  *
@@ -38,6 +41,14 @@ catch (Exception e) {
              
             } 
         return f;
+}
+    
+    public List<Trans> getAllTrans()
+{
+    Session t=this.factory.openSession();
+    Query query = t.createQuery("from Trans");
+    List<Trans> list = query.list();
+    return list;
 }
     
 }

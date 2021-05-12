@@ -33,7 +33,7 @@
           %>
           <%  int cunt=0;
                                                     for(Cheq cheq:list)
-                                                {    if(cheq.getCheqt().getUserId()==1)
+                                                {    if(cheq.getCheqt().getUserId()==userc.getUserId())
                                                 {  cunt++;}}%>
         <div class="container">
             <div class="row mt-5">                
@@ -57,7 +57,7 @@
 
                                 <div class="form-group">
                                     <label for="cheq_connum">Your contact</label>
-                                    <input name ="cheq_connum" type="text" class="form-control" id="cheq_connum"  >
+                                    <input name ="cheq_connum" type="text" class="form-control" id="cheq_connum" value="<%=userc.getUserPhone()%>" >
                                 </div>
 
 
@@ -102,18 +102,20 @@
                                                 <%  int count=0;
                                                 String s;
                                                     for(Cheq cheq:list)
-                                                {    if(cheq.getCheqt().getUserId()==1)
+                                                {    if(cheq.getCheqt().getUserId()==userc.getUserId())
                                                 {  count++;
                                                 %>
                                                 <tr>
                                                     <td><%=count%></td>
-                                                    <% if(cheq.isCheqStatus()==false)
+                                                    <% if(cheq.getCheqStatus()==0)
                                                        s= "In Process";
-                                                    else s="Issued";
+                                                    else if(cheq.getCheqStatus()==1) s="Issued";
+                                                    else
+                                                    s="Rejected";
                                                     %>
                                                     <td><%=cheq.getCheqId()%> </td>
                                                     <td><%=s%> </td>
-                                                    <td><%=cheq.getCheqt().getUserId()%> </td>
+                                                    <td><%=cheq.getCheqAdd()%> </td>
                                                     
                                                 </tr>
                                               

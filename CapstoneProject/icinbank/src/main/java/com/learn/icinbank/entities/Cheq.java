@@ -19,7 +19,7 @@ public class Cheq {
     @Column(length = 10, name = "cheq_id")
     private int cheqId;
    @Column(name="cheq_status")
-    private boolean cheqStatus;
+    private int cheqStatus;
     @ManyToOne
     private User cheqt;
     @Column(name="cheq_add")
@@ -27,7 +27,7 @@ public class Cheq {
     @Column(name="cheq_connum")
     private String cheqConnum;
 
-    public Cheq(int cheqId, boolean cheqStatus, User cheqt,String cheqAdd) {
+    public Cheq(int cheqId, int cheqStatus, User cheqt,String cheqAdd) {
         this.cheqId = cheqId;
         this.cheqStatus = cheqStatus;
         this.cheqt = cheqt;
@@ -37,7 +37,7 @@ public class Cheq {
     public Cheq() {
     }
 
-    public Cheq(boolean cheqStatus, User cheqt,String cheqAdd) {
+    public Cheq(int cheqStatus, User cheqt,String cheqAdd) {
         this.cheqStatus = cheqStatus;
         this.cheqt = cheqt;
         this.cheqAdd = cheqAdd;
@@ -47,7 +47,7 @@ public class Cheq {
         return cheqConnum;
     }
 
-    public Cheq(boolean cheqStatus, User cheqt, String cheqAdd, String cheqConnum) {
+    public Cheq(int cheqStatus, User cheqt, String cheqAdd, String cheqConnum) {
         this.cheqStatus = cheqStatus;
         this.cheqt = cheqt;
         this.cheqAdd = cheqAdd;
@@ -58,7 +58,7 @@ public class Cheq {
         this.cheqConnum = cheqConnum;
     }
 
-    public Cheq(int cheqId, boolean cheqStatus, User cheqt, String cheqAdd, String cheqConnum) {
+    public Cheq(int cheqId, int cheqStatus, User cheqt, String cheqAdd, String cheqConnum) {
         this.cheqId = cheqId;
         this.cheqStatus = cheqStatus;
         this.cheqt = cheqt;
@@ -82,13 +82,15 @@ public class Cheq {
         this.cheqId = cheqId;
     }
 
-    public boolean isCheqStatus() {
+    public int getCheqStatus() {
         return cheqStatus;
     }
 
-    public void setCheqStatus(boolean cheqStatus) {
+    public void setCheqStatus(int cheqStatus) {
         this.cheqStatus = cheqStatus;
     }
+
+    
 
     public User getCheqt() {
         return cheqt;

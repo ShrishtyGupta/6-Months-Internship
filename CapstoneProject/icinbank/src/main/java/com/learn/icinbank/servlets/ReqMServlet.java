@@ -41,6 +41,8 @@ public class ReqMServlet extends HttpServlet {
                                int trans_Amt = Integer.parseInt(request.getParameter("trans_Amt"));
                                 String acc_toacc = request.getParameter("acc_toacc");
                                 String acc_tobank = request.getParameter("acc_tobank");
+                                String trans_name = request.getParameter("trans_name");
+                                String trans_ifsc = request.getParameter("trans_ifsc");
                                
     
                 //creating user object to store data
@@ -54,6 +56,9 @@ public class ReqMServlet extends HttpServlet {
                 s.setTransStatus(true);
                 s.setAccToacc(acc_toacc);
                 
+                s.setTransIFSC(trans_ifsc);
+                s.setTransName(trans_name);
+                
                 
                
                 UserDao udao = new UserDao(FactoryProvider.getFactory());
@@ -66,7 +71,7 @@ public class ReqMServlet extends HttpServlet {
                 
                 httpSession.setAttribute("message_1", " Your Transaction is successful! Check BalanceSheet for details "  );    
               
-                response.sendRedirect("userservices.jsp");
+                response.sendRedirect("balancesheet.jsp");
                 return;
                 
                 

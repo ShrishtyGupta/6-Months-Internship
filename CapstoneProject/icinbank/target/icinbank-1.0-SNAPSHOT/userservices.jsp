@@ -28,7 +28,7 @@
 
 
             <div class="container-fluid mt-3">
-                <%@include file="message_1.jsp" %>
+                
             </div>
 
 
@@ -141,8 +141,8 @@
                 <!--second row : second col-->
 
                 <div class="col-md-6">
-
-                    <div class="card" data-toggle="modal" data-target="#add-product-modal">
+                    <a href="balancesheet.jsp">
+                    <div class="card" >
 
                         <div class="card-body text-center">
 
@@ -151,12 +151,12 @@
 
                             </div> 
 
-                            <p class="mt-2">Click here to Check Balance Sheet </p>
+                            <p class="mt-2" style="color:#000">Click here to Check Balance Sheet </p>
                             <h1 class="text-uppercase text-muted">balance sheet</h1>
 
                         </div>
 
-                    </div>
+                    </div></a>
 
                 </div>
 
@@ -355,6 +355,32 @@
                                 </div><br>
                                 
                         </div>
+                                    
+                                    <div class="row " style="row-gap:100px">
+                           
+                            
+                            
+                                <div class="form-group" style="padding-left: 50px">
+                                   
+                                    <label for="trans_name">Beneficiary Name</label>
+                                    <input  name="trans_name" type="text" class="form-control" id="trans_name" >
+                                    <small id="emailHelp" class="form-text text-muted">Recepient Name.</small>
+                                </div><br>
+                                
+                                
+                                
+                                <div class="form-group" style="padding-left: 50px">
+                                   
+                                    <label for="trans_ifsc">Beneficiary IFSC Code</label>
+                                    <input  name="trans_ifsc" type="text" class="form-control" id="trans_ifsc" >
+                                    <small id="emailHelp" class="form-text text-muted">Currency Indian National Rupee</small>
+                                </div><br>
+                                
+                        </div>
+                                    
+                                    
+                                    
+                                    
                              <div class="row">
                                 
                                 

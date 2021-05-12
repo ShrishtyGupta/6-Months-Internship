@@ -23,6 +23,7 @@ public class Trans {
     private int transAmt;
     @Column( name = "trans_Date")
     private java.util.Date transDate;
+    
     @Column(length = 100, name = "acc_tobank")
     private String accTobank;
      @Column(length = 100, name = "acc_toacc")
@@ -32,8 +33,12 @@ public class Trans {
 
     @Column(name="trans_status")
     private boolean transStatus;
+    @Column(length = 100, name = "trans_name")
+    private String transName;
+     @Column(length = 100, name = "trans_ifsc")
+    private String transIFSC;
 
-    public Trans(int transId, int transAmt, Date transDate, String accTobank, String accToacc, User transt, boolean transStatus) {
+    public Trans(int transId, int transAmt, Date transDate, String accTobank, String accToacc, User transt, boolean transStatus, String transName, String transIFSC) {
         this.transId = transId;
         this.transAmt = transAmt;
         this.transDate = transDate;
@@ -41,18 +46,38 @@ public class Trans {
         this.accToacc = accToacc;
         this.transt = transt;
         this.transStatus = transStatus;
+        this.transName=transName;
+        this.transIFSC=transIFSC;
     }
 
     public Trans() {
     }
 
-    public Trans(int transAmt, Date transDate, String accTobank, String accToacc, User transt, boolean transStatus) {
+    public Trans(int transAmt, Date transDate, String accTobank, String accToacc, User transt, boolean transStatus, String transName, String transIFSC) {
         this.transAmt = transAmt;
         this.transDate = transDate;
         this.accTobank = accTobank;
         this.accToacc = accToacc;
         this.transt = transt;
         this.transStatus = transStatus;
+        this.transName=transName;
+        this.transIFSC=transIFSC;
+    }
+
+    public String getTransIFSC() {
+        return transIFSC;
+    }
+
+    public void setTransIFSC(String transIFSC) {
+        this.transIFSC = transIFSC;
+    }
+
+    public String getTransName() {
+        return transName;
+    }
+
+    public void setTransName(String transName) {
+        this.transName = transName;
     }
 
     public int getTransId() {
@@ -113,8 +138,12 @@ public class Trans {
 
     @Override
     public String toString() {
-        return "Trans{" + "transId=" + transId + ", transAmt=" + transAmt + ", transDate=" + transDate + ", accTobank=" + accTobank + ", accToacc=" + accToacc + ", transt=" + transt + ", transStatus=" + transStatus + '}';
+        return "Trans{" + "transId=" + transId + ", transAmt=" + transAmt + ", transDate=" + transDate + ", accTobank=" + accTobank + ", accToacc=" + accToacc + ", transt=" + transt + ", transStatus=" + transStatus + ", transName=" + transName + ", transIFSC=" + transIFSC + '}';
     }
+
+   
+
+    
 
     
     

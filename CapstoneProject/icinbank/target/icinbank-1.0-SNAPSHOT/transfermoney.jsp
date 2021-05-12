@@ -33,8 +33,9 @@
                         <div class="card-body">
                             <h3 class="text-center mb-5">Money Transfer</h3>
                             <form action="ReqMServlet" method="post">
+                                 <%@include file="message.jsp" %>
                              <div class="row " style="row-gap:100px">
-                            <%@include file="message.jsp" %>
+                           
                             
                             
                                 <div class="form-group" style="padding-left: 50px">
