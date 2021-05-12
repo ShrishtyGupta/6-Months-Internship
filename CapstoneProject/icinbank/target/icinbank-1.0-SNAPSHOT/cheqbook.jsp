@@ -1,3 +1,7 @@
+<%@page import="java.util.List"%>
+<%@page import="com.learn.icinbank.entities.Cheq"%>
+<%@page import="com.learn.icinbank.dao.ReqCheqDao"%>
+<%@page import="com.learn.icinbank.helper.FactoryProvider"%>
 <%@page import="com.learn.icinbank.entities.User"%>
 <%
 
@@ -64,11 +68,23 @@
                         </div>
                     </div>
                 </div>
+                                     <%
+                                                ReqCheqDao dao=new ReqCheqDao(FactoryProvider.getFactory());
+                                                List<Cheq> list = dao.getAllCheq();
+                                                %>
+                                    
                                     <div class="col-md-7">
                                         <div class="card">
                                             <br>
                                             <h3 class="text-center mb-5" style="padding-top:15px">Checkbook Status Sheet</h3>
-                                            
+                                            <div>
+                                                <h1>Number of checkbook is <%=list.size()%> </h1> 
+                                                <% for(Cheq cheq:list)
+                                                {    if(cheq.getCheqt().getUserId()==1)
+                                                {out.println(cheq.getCheqId()+cheq.getCheqAdd()+cheq.isCheqStatus()+cheq.getCheqt().getUserId()+"<br>");
+                                                } }
+                                                    %>
+                                            </div>
                                             <div class="card-body"></div>
                                         </div></div>
             </div>

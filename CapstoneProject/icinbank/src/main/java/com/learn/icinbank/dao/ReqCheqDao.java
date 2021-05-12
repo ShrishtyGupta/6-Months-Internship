@@ -7,6 +7,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
+
 public class ReqCheqDao {
     private SessionFactory factory;
     
@@ -31,7 +32,18 @@ catch (Exception e) {
              
             } 
         return f;
-}}
+}
+
+public List<Cheq> getAllCheq()
+{
+    Session s=this.factory.openSession();
+    Query query = s.createQuery("from Cheq");
+    List<Cheq> list = query.list();
+    return list;
+}
+
+
+}
 
 
 
