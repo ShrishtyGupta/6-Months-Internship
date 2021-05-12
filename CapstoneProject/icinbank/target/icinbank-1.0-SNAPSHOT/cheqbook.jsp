@@ -22,22 +22,22 @@
         <%@include file="components/common_css_js.jsp" %>
     </head>
     <body style="background: #0b2239">
-        <%@include file="components/navbar.jsp" %><br>
+        <%@include file="components/navbar.jsp" %>
         <div class="container">
             <div class="row mt-5">                
 
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <!--form details-->
                     <!--card-->
                     <div class="card">
                         <div class="card-body">
 <%@include file="message.jsp" %>
-                            <h3 class="text-center mb-5">Request a New Checkbook</h3>
+                            
                             <form action="ReqChServlet" method="post">
                                 <div class="form-group">
-                                   
+                                   <h3 class="text-center mb-5">Request a New Checkbook</h3>
                                     <label for="cheqt_user_id">User ID</label>
-                                    <input  name="cheqt_user_id" type="text" class="form-control" id="cheqt_user_id" >
+                                    <input  name="cheqt_user_id" type="text" class="form-control" id="cheqt_user_id" value="<%=userc.getUserId()%>" >
                                     <small id="emailHelp" class="form-text text-muted">Do not change this ID.</small>
                                 </div>
                                 
@@ -64,6 +64,13 @@
                         </div>
                     </div>
                 </div>
+                                    <div class="col-md-7">
+                                        <div class="card">
+                                            <br>
+                                            <h3 class="text-center mb-5" style="padding-top:15px">Checkbook Status Sheet</h3>
+                                            
+                                            <div class="card-body"></div>
+                                        </div></div>
             </div>
 
         </div><br><br>

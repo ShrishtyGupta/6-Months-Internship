@@ -72,7 +72,7 @@ public class ReqChServlet extends HttpServlet {
                 rdao.saveCheq(c);
                 HttpSession httpSession = request.getSession();
                 
-                httpSession.setAttribute("message", " Your Unique Checkbook will be approved soon "  );    
+                httpSession.setAttribute("message", "Your Checkbook will be approved soon"  );    
               
                 response.sendRedirect("cheqbook.jsp");
                 return;

@@ -1,8 +1,8 @@
 <%@page import="com.learn.icinbank.entities.User"%>
 <%
 
-    User userc = (User) session.getAttribute("current-user");
-    if (userc == null) {
+    User usertt = (User) session.getAttribute("current-user");
+    if (usertt == null) {
 
         session.setAttribute("message", "You are not logged in !! Login first to access checkbook page");
         response.sendRedirect("login.jsp");
@@ -40,7 +40,7 @@
                                 <div class="form-group" style="padding-left: 50px">
                                    
                                     <label for="transtt_user_id">Your User ID</label>
-                                    <input  name="transt_user_id" type="text" class="form-control" id="transt_user_id" >
+                                    <input  name="transt_user_id" type="text" class="form-control" id="transt_user_id" value="<%=usertt.getUserId()%>">
                                     <small id="emailHelp" class="form-text text-muted">Do not change this ID.</small>
                                 </div><br>
                                 
@@ -49,7 +49,7 @@
                                 <div class="form-group" style="padding-left: 50px">
                                    
                                     <label for="trans_Amt">Transaction Amount</label>
-                                    <input  name="trans_Amt" type="text" class="form-control" id="trans_Amt" >
+                                    <input  name="trans_Amt" type="number" class="form-control" id="trans_Amt" >
                                     <small id="emailHelp" class="form-text text-muted">Currency Indian National Rupee</small>
                                 </div><br>
                                 
@@ -60,7 +60,7 @@
                                 <div class="form-group" style="padding-left: 50px">
                                    
                                     <label for="acc_toacc">Account Number</label>
-                                    <input  name="acc_toacc" type="text" class="form-control" id="acc_toacc" >
+                                    <input  name="acc_toacc" type="number" class="form-control" id="acc_toacc" >
                                     <small id="emailHelp" class="form-text text-muted">Account Number of Recepient.</small>
                                 </div><br>
                                 <div class="form-group" style="padding-left: 50px">
@@ -70,14 +70,11 @@
                                     <small id="emailHelp" class="form-text text-muted">Bank Name of Recepient.</small>
                                 </div> <br>
 
-
-                                
-
-
-                                
+                        
+                            
 
                                 <div class="container text-center">
-                                    <button class="btn btn-outline-success">Request Now</button>
+                                    <button class="btn btn-outline-success">Transfer Now</button>
                                     
                                 </div>
 
