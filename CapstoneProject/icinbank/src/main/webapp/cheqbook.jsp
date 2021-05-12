@@ -21,8 +21,8 @@
         <title>Checkbook Details</title>
         <%@include file="components/common_css_js.jsp" %>
     </head>
-    <body>
-        <%@include file="components/navbar_1.jsp" %><br>
+    <body style="background: #0b2239">
+        <%@include file="components/navbar.jsp" %><br>
         <div class="container">
             <div class="row mt-5">                
 
@@ -67,6 +67,6 @@
             </div>
 
         </div><br><br>
-        <%@include file="components/footer.jsp" %>
+        <%@include file="components/footer_1.jsp" %>
     </body>
 </html>
