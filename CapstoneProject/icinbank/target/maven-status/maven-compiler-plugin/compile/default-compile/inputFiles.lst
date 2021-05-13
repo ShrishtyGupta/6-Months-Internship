@@ -3,13 +3,16 @@ C:\Users\hp\OneDrive\Desktop\Padhai\SimplilearnTEKsystems\CapstoneProject\icinba
 C:\Users\hp\OneDrive\Desktop\Padhai\SimplilearnTEKsystems\CapstoneProject\icinbank\src\main\java\com\learn\icinbank\servlets\ReqChServlet.java
 C:\Users\hp\OneDrive\Desktop\Padhai\SimplilearnTEKsystems\CapstoneProject\icinbank\src\main\java\com\learn\icinbank\entities\Trans.java
 C:\Users\hp\OneDrive\Desktop\Padhai\SimplilearnTEKsystems\CapstoneProject\icinbank\src\main\java\com\learn\icinbank\dao\ReqMDao.java
+C:\Users\hp\OneDrive\Desktop\Padhai\SimplilearnTEKsystems\CapstoneProject\icinbank\src\main\java\com\learn\icinbank\entities\PrimAcc.java
 C:\Users\hp\OneDrive\Desktop\Padhai\SimplilearnTEKsystems\CapstoneProject\icinbank\src\main\java\com\learn\icinbank\helper\FactoryProvider.java
 C:\Users\hp\OneDrive\Desktop\Padhai\SimplilearnTEKsystems\CapstoneProject\icinbank\src\main\java\com\learn\icinbank\servlets\LogoutServlet.java
 C:\Users\hp\OneDrive\Desktop\Padhai\SimplilearnTEKsystems\CapstoneProject\icinbank\src\main\java\com\learn\icinbank\servlets\RegisterServlet.java
-C:\Users\hp\OneDrive\Desktop\Padhai\SimplilearnTEKsystems\CapstoneProject\icinbank\src\main\java\com\learn\icinbank\entities\Acc.java
+C:\Users\hp\OneDrive\Desktop\Padhai\SimplilearnTEKsystems\CapstoneProject\icinbank\src\main\java\com\learn\icinbank\servlets\AccServlet.java
 C:\Users\hp\OneDrive\Desktop\Padhai\SimplilearnTEKsystems\CapstoneProject\icinbank\src\main\java\com\learn\icinbank\dao\UserDao.java
 C:\Users\hp\OneDrive\Desktop\Padhai\SimplilearnTEKsystems\CapstoneProject\icinbank\src\main\java\com\learn\icinbank\entities\User.java
 C:\Users\hp\OneDrive\Desktop\Padhai\SimplilearnTEKsystems\CapstoneProject\icinbank\src\main\java\com\learn\icinbank\servlets\ReqMServlet.java
+C:\Users\hp\OneDrive\Desktop\Padhai\SimplilearnTEKsystems\CapstoneProject\icinbank\src\main\java\com\learn\icinbank\entities\SaveAcc.java
 C:\Users\hp\OneDrive\Desktop\Padhai\SimplilearnTEKsystems\CapstoneProject\icinbank\src\main\java\com\learn\icinbank\dao\ReqCheqDao.java
 C:\Users\hp\OneDrive\Desktop\Padhai\SimplilearnTEKsystems\CapstoneProject\icinbank\src\main\java\com\learn\icinbank\servlets\LoginServlet.java
+C:\Users\hp\OneDrive\Desktop\Padhai\SimplilearnTEKsystems\CapstoneProject\icinbank\src\main\java\com\learn\icinbank\dao\AccDao.java
 C:\Users\hp\OneDrive\Desktop\Padhai\SimplilearnTEKsystems\CapstoneProject\icinbank\src\main\java\com\learn\icinbank\helper\Helper.java

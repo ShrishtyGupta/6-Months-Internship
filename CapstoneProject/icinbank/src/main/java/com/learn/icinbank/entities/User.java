@@ -39,8 +39,10 @@ public class User {
     private boolean userStatus;
     @OneToMany(mappedBy="cheqt")
     private List<Cheq> cheqs = new ArrayList<>();
-      @OneToMany(mappedBy="acct")
-    private List<Acc> accs = new ArrayList<>();
+      @OneToMany(mappedBy="pacct")
+    private List<PrimAcc> paccs = new ArrayList<>();
+       @OneToMany(mappedBy="sacct")
+    private List<SaveAcc> saccs = new ArrayList<>();
       @OneToMany(mappedBy="transt")
     private List<Trans> transs = new ArrayList<>();
 
@@ -71,7 +73,7 @@ public class User {
     }
 
     
-    public User(int userId, String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType, boolean userStatus, List<Cheq> cheqs, List<Acc>accs, List<Trans> transs) {
+    public User(int userId, String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType, boolean userStatus, List<Cheq> cheqs, List<PrimAcc>paccs,List<SaveAcc>saccs, List<Trans> transs) {
         this.userId = userId;
         this.userName = userName;
         this.userEmail = userEmail;
@@ -81,7 +83,8 @@ public class User {
         this.userType = userType;
         this.userStatus = userStatus;
         this.cheqs = cheqs;
-        this.accs=accs;
+        this.paccs=paccs;
+        this.saccs=saccs;
         this.transs=transs;
         
        
@@ -89,7 +92,7 @@ public class User {
         
     }
 
-    public User(String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType,boolean userStatus,List<Cheq> cheqs, List<Acc>accs, List<Trans> transs) {
+    public User(String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType,boolean userStatus,List<Cheq> cheqs, List<PrimAcc>paccs,List<SaveAcc>saccs, List<Trans> transs) {
         this.userName = userName;
         this.userEmail = userEmail;
         this.userPassword = userPassword;
@@ -98,7 +101,8 @@ public class User {
         this.userType = userType;
         this.userStatus = userStatus;
         this.cheqs = cheqs;
-        this.accs=accs;
+        this.paccs=paccs;
+        this.saccs=saccs;
         this.transs=transs;
     }
 
@@ -177,12 +181,20 @@ public class User {
         this.cheqs = cheqs;
     }
 
-    public List<Acc> getAccs() {
-        return accs;
+    public List<PrimAcc> getPaccs() {
+        return paccs;
     }
 
-    public void setAccs(List<Acc> accs) {
-        this.accs = accs;
+    public void setPaccs(List<PrimAcc> paccs) {
+        this.paccs = paccs;
+    }
+    
+    public List<SaveAcc> getSaccs() {
+        return saccs;
+    }
+
+    public void setSaccs(List<SaveAcc> saccs) {
+        this.saccs = saccs;
     }
 
     public List<Trans> getTranss() {

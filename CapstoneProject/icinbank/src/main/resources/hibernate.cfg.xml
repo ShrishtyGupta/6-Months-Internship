@@ -14,7 +14,8 @@
         <property name="show_sql">true</property>    
         <mapping class="com.learn.icinbank.entities.User" />  
         <mapping class="com.learn.icinbank.entities.Cheq" />  
-        <mapping class="com.learn.icinbank.entities.Acc" />  
+        <mapping class="com.learn.icinbank.entities.PrimAcc" />  
+        <mapping class="com.learn.icinbank.entities.SaveAcc" />  
         <mapping class="com.learn.icinbank.entities.Trans" />  
  
             

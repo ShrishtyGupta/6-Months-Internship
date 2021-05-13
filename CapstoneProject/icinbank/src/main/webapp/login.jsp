@@ -12,7 +12,7 @@
         <title>ICIN Bank - Login</title>
          <%@include file="components/common_css_js.jsp" %>
     </head>
-    <body>
+    <body style="background: #fff">
        
          <%@include  file="components/navbar_1.jsp" %>
          <br>
@@ -21,13 +21,13 @@
             <div class="row">
                 <div class="col-md-6 offset-md-3">
 
-                    <div class="card mt-3">
+                    <div class="card mt-3" style="box-shadow: 0 0 20px rgba(0,0,0,0.4)">
 
                         <div class="card-header text-white " style="background-color: #0b2239;">
                             <h3>Login here</h3>
                         </div>
 
-                        <div class="card-body" style="background-color: #ddd1c7">                            
+                        <div class="card-body" >                            
                             <%@include file="message.jsp" %>
                             <form action="LoginServlet" method="post">
                                 <div class="form-group">

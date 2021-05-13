@@ -20,7 +20,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import com.learn.icinbank.entities.User;
 import com.learn.icinbank.entities.Cheq;
-import com.learn.icinbank.entities.Acc;
+import com.learn.icinbank.entities.PrimAcc;
 import com.learn.icinbank.entities.Trans;
 import com.learn.icinbank.helper.FactoryProvider;
 import java.io.IOException;

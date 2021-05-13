@@ -40,7 +40,7 @@
                 <div class="col-md-4">
                     <a href="profile.jsp">
                     <!--first box-->
-                    <div class="card">
+                    <div class="card" style="box-shadow: 0 0 20px rgba(0,0,0,0.4);">
                         <div class="card-body text-center">
                             <div class="container">
                                 <img style="max-width: 125px;" class="img-fluid  " src="img/social.png" alt="user_icon">
@@ -120,8 +120,8 @@
                 <!--second :row first col-->
                 <div class="col-md-6">
 
-
-                    <div class="card" data-toggle="modal" data-target="#add-category-modal">
+                    <a href="depositmoney.jsp">
+                    <div class="card" >
 
                         <div class="card-body text-center">
 
@@ -135,7 +135,7 @@
 
                         </div>
 
-                    </div>
+                    </div></a>
                 </div>
 
                 <!--second row : second col-->

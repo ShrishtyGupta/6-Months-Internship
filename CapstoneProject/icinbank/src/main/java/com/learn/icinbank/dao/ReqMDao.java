@@ -5,7 +5,6 @@
  */
 package com.learn.icinbank.dao;
 
-import com.learn.icinbank.entities.Cheq;
 import com.learn.icinbank.entities.Trans;
 import java.util.List;
 import org.hibernate.Session;
@@ -13,10 +12,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-/**
- *
- * @author hp
- */
+
 public class ReqMDao {
     private SessionFactory factory;
     
