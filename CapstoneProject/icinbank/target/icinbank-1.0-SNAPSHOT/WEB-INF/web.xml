@@ -32,6 +32,10 @@
         <servlet-name>DepoPMServlet</servlet-name>
         <servlet-class>com.learn.icinbank.servlets.DepoPMServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UpdateStatusServlet</servlet-name>
+        <servlet-class>com.learn.icinbank.servlets.UpdateStatusServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>register</servlet-name>
         <url-pattern>/register</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>DepoPMServlet</servlet-name>
         <url-pattern>/DepoPMServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateStatusServlet</servlet-name>
+        <url-pattern>/UpdateStatusServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

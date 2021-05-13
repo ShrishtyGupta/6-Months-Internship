@@ -75,7 +75,7 @@
                 <!--second row : second col-->
 
                 <div class="col-md-6">
-                    <a href="checkbookadmin.jsp" style="hover{text-decoration: none; }">
+                    <a href="checkbookadmin.jsp" >
                     <div class="card" data-toggle="modal" data-target="#add-product-modal">
 
                         <div class="card-body text-center">

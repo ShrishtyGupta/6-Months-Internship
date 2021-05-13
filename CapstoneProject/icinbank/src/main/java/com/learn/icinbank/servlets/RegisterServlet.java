@@ -42,7 +42,7 @@ public class RegisterServlet extends HttpServlet {
                 
                 User user = new User(userName, userEmail, userPassword, userPhone, userAddress, "normal", true);
                 java.util.Date date=new java.util.Date();  
-                Cheq cheqq = new Cheq(0, user, userAddress, userPhone); 
+                Cheq cheqq = new Cheq(1, user, userAddress, userPhone); 
                 PrimAcc paccss = new PrimAcc(0,user,false);
                 SaveAcc saccss = new SaveAcc(0,user,false);
                 Trans transs = new Trans(0,date,"Acc. Activation","Acc. Activation",user,true,userName,"Acc. Activation" );
