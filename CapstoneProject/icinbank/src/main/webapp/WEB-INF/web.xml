@@ -25,12 +25,12 @@
         <servlet-class>com.learn.icinbank.servlets.ReqMServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>DepoMServlet</servlet-name>
-        <servlet-class>com.learn.icinbank.servlets.DepoMServlet</servlet-class>
+        <servlet-name>DepoSMServlet</servlet-name>
+        <servlet-class>com.learn.icinbank.servlets.DepoSMServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>AccServlet</servlet-name>
-        <servlet-class>com.learn.icinbank.servlets.AccServlet</servlet-class>
+        <servlet-name>DepoPMServlet</servlet-name>
+        <servlet-class>com.learn.icinbank.servlets.DepoPMServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>register</servlet-name>
@@ -57,12 +57,12 @@
         <url-pattern>/ReqMServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>DepoMServlet</servlet-name>
-        <url-pattern>/DepoMServlet</url-pattern>
+        <servlet-name>DepoSMServlet</servlet-name>
+        <url-pattern>/DepoSMServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>AccServlet</servlet-name>
-        <url-pattern>/AccServlet</url-pattern>
+        <servlet-name>DepoPMServlet</servlet-name>
+        <url-pattern>/DepoPMServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

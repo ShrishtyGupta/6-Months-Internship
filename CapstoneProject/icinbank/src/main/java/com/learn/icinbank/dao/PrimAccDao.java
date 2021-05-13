@@ -1,23 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.learn.icinbank.dao;
 
 
 import com.learn.icinbank.entities.PrimAcc;
-import com.learn.icinbank.entities.Trans;
+
+import com.learn.icinbank.entities.User;
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-/**
- *
- * @author hp
- */
+
 public class PrimAccDao {
     
     
@@ -26,6 +20,12 @@ public class PrimAccDao {
     public PrimAccDao(SessionFactory factory){
     this.factory=factory;
     }
+    
+    
+    
+    
+    
+    
     
     public boolean savePrimAcc(PrimAcc ch){
         boolean f=false;

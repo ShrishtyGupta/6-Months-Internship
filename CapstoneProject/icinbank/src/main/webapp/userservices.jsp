@@ -135,7 +135,8 @@
 
                         </div>
 
-                    </div></a>
+                    </div>
+                    </a>
                 </div>
 
                 <!--second row : second col-->
