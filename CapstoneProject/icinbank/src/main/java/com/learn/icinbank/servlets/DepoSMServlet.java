@@ -5,12 +5,17 @@
  */
 package com.learn.icinbank.servlets;
 
+import com.learn.icinbank.helper.FactoryProvider;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 /**
  *
@@ -31,16 +36,36 @@ public class DepoSMServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet DepoSMServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet DepoSMServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            try {
+                                int sacct_user_id = Integer.parseInt(request.getParameter("sacct_user_id"));
+                               int sacc_id = Integer.parseInt(request.getParameter("sacc_id"));
+                                int sacc_balnew = Integer.parseInt(request.getParameter("sacc_balnew"));
+                                int sacc_bal = Integer.parseInt(request.getParameter("sacc_bal"));  
+                               int xx=sacc_bal+sacc_balnew;
+             
+                
+                Session ss = FactoryProvider.getFactory().openSession();
+                Transaction txx = ss.beginTransaction(); 
+                Query q=ss.createQuery("update SaveAcc set saccBal=:pp where saccId=:ii");
+                
+                q.setParameter("pp",xx);
+                q.setParameter("ii",sacc_id);
+                q.executeUpdate();
+                txx.commit();
+                ss.close();   
+               
+               
+                HttpSession httpSession = request.getSession();
+                
+                httpSession.setAttribute("message_1", "Transaction Succcessful!"  );    
+              
+                response.sendRedirect("depositmoney.jsp");
+                return;
+                
+                
+            } catch (Exception e) {
+                e.printStackTrace();      
+            }
         }
     }
 

@@ -54,7 +54,7 @@
                 <!--second :row first col-->
                 <div class="col-md-6">
 
-
+<a href="adminuserauth.jsp" style="hover{text-decoration: none; }">
                     <div class="card" data-toggle="modal" data-target="#add-category-modal">
 
                         <div class="card-body text-center">
@@ -64,18 +64,18 @@
 
                             </div> 
 
-                            <p class="mt-2">Click here to Deposit Money </p>
+                            <p class="mt-2">Click here to Authenticate User and User Accounts </p>
                             <h1 class="text-uppercase text-muted"> User <br>Authentication </h1>
 
                         </div>
 
-                    </div>
+                    </div></a>
                 </div>
 
                 <!--second row : second col-->
 
                 <div class="col-md-6">
-
+                    <a href="checkbookadmin.jsp" style="hover{text-decoration: none; }">
                     <div class="card" data-toggle="modal" data-target="#add-product-modal">
 
                         <div class="card-body text-center">
@@ -85,12 +85,12 @@
 
                             </div> 
 
-                            <p class="mt-2">Click here to Withdraw Money </p>
+                            <p class="mt-2" style="color:#000; ">Click here to View and Approve Checkbook Requests </p>
                             <h1 class="text-uppercase text-muted">Approve <br>Checkbook</h1>
 
                         </div>
 
-                    </div>
+                    </div></a>
 
                 </div>
 

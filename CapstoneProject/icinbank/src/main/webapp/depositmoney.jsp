@@ -90,16 +90,18 @@
     <div class="col-md-6">
     <div class="card">
     <div class="card-body">      
-        <form action="DepSMServlet" method="post">
+        <form action="DepoSMServlet" method="post">
         <div class="form-group">
             <h3 class="text-center ">Deposit in Savings</h3>
             <%       for(SaveAcc saveacc:slist)
                         { if(saveacc.getSacct().getUserId()==userd.getUserId()){
             %>
+             <input  name="sacc_bal" type="hidden" class="form-control" id="pacc_bal" value="<%=saveacc.getSaccBal()%>" >
             <small id="emailHelp" class="form-text text-muted text-center">You have INR <%=saveacc.getSaccBal()%> Savings balance </small><br>
             <%
                 }}
-            %>                             
+            %>
+            <%@include file="message_1.jsp" %>
             <label for="sacct_user_id">User ID</label>
             <input  name="sacct_user_id" type="text" class="form-control" id="sacct_user_id" value="<%=userd.getUserId()%>" >
             <small id="emailHelp" class="form-text text-muted">Do not change this ID.</small>
