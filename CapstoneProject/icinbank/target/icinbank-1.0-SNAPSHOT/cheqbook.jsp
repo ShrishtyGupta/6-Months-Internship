@@ -22,7 +22,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Checkbook Details</title>
+        <title> <%=userc.getUserName()%>'s Checkbook Details</title>
         <%@include file="components/common_css_js.jsp" %>
     </head>
     <body style="background: #0b2239">

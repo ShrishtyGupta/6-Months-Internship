@@ -5,3 +5,66 @@
   background: #7E8987 !important;
 }
 
+
+
+
+
+
+
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #383A3F;
+  font-family: "Varela Round", sans-serif;
+}
+
+.card {
+  
+  
+  }
+  &:nth-child(2) {
+    margin: 20px 0px;
+    width: 33.3333%;
+    padding: 50px 20px;
+    
+  }
+  .title {
+    font-size: 25px;
+  }
+  .icon {
+    
+  }
+  .features {
+    ul {
+      padding: 0;
+      margin: 20px 0 50px 0;
+      list-style-type: none;
+      li {
+        margin: 10px 0;
+        font-size: 14px;
+        span {
+          border-bottom: 2px dotted #F6B352;
+        }
+      }
+    }
+  }
+  .btn {
+    display: block;
+    background: #F6B352;
+    color: white;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.9);
+    transition: all 200ms ease-in-out;
+    text-decoration: none;
+    &:hover {
+      background: #F68657;
+    }
+  }
+
+

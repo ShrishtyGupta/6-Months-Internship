@@ -1,23 +1,15 @@
-
 <%@page import="java.util.List"%>
 <%@page import="com.learn.icinbank.entities.Trans"%>
 <%@page import="com.learn.icinbank.dao.ReqMDao"%>
 <%@page import="com.learn.icinbank.helper.FactoryProvider"%>
 <%@page import="com.learn.icinbank.entities.User"%>
 <%
-
     User userb = (User) session.getAttribute("current-user");
     if (userb == null) {
-
         session.setAttribute("message", "You are not logged in !! Login first to access balancesheet page");
         response.sendRedirect("login.jsp");
         return;
-
-    }
-    
-   
-    
-    
+    }    
 %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -25,7 +17,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Balance Sheet</title>
+        <title> <%=userb.getUserName()%>'s Balance Sheet</title>
         <%@include file="components/common_css_js.jsp" %>
     </head>
     

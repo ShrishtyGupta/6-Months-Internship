@@ -1,7 +1,9 @@
 
 package com.learn.icinbank.dao;
 
+import com.learn.icinbank.entities.Trans;
 import com.learn.icinbank.entities.User;
+import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -49,5 +51,13 @@ public class UserDao {
     session.close();
     return u;
     }
+    
+    public List<User> getUserDet()
+{
+    Session u=this.factory.openSession();
+    Query query = u.createQuery("from User");
+    List<User> list = query.list();
+    return list;
+}
     
 }

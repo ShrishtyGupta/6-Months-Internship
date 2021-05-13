@@ -17,7 +17,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title> User - Services </title>
+        <title> <%=useru.getUserName()%>'s Services </title>
         <%@include file="components/common_css_js.jsp" %>
     </head>
     <body style="background: #0b2239
@@ -38,7 +38,7 @@
 
                 <!--first col-->
                 <div class="col-md-4">
-
+                    <a href="profile.jsp">
                     <!--first box-->
                     <div class="card">
                         <div class="card-body text-center">
@@ -51,7 +51,7 @@
 
                         </div>
 
-                    </div>
+                    </div></a>
 
 
 
