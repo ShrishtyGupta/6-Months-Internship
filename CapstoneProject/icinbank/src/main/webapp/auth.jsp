@@ -47,7 +47,7 @@
                 <!--first col-->
                 <div class="col-md-4">
 
-                    <!--first box-->
+                    <a href="primauth.jsp">         <!--first box-->
                 <div class="card" style="background: #fff;   box-shadow: 0 0 20px rgba(0,0,0,0.4);   border-radius: 5px;      padding: 20px;   text-align: center;   color: white;   ">
                         <div class="card-body text-center">
                              
@@ -57,7 +57,7 @@
                         </div>
 
                     </div>
-
+                    </a>
 
 
                 </div>
@@ -66,7 +66,7 @@
 
                 <div class="col-md-4">
 
-
+ <a href="userauth.jsp">  
                 <div class="card" style="background: #fff;   margin-top: 23PX;box-shadow: 0 0 20px rgba(0,0,0,0.4);   border-radius: 5px;      padding: 20px;   text-align: center;   color: white;   ">
 
                         <div class="card-body text-center">
@@ -79,7 +79,7 @@
                         </div>
 
                     </div>
-
+ </a>
 
                 </div>
 
@@ -87,15 +87,15 @@
                 <!--third col-->
                 <div class="col-md-4">
 
-
+                    <a href="saveauth.jsp">
                 <div class="card" style="background: #fff;   box-shadow: 0 0 20px rgba(0,0,0,0.4);   border-radius: 5px;      padding: 20px;   text-align: center;   color: white;   ">
-
+                   
                         <div class="card-body text-center">
 
                             
                             <h1 class="text-uppercase text-muted">Savings Account AUDIT</h1>
                         </div>
-                    </div>
+                    </div> </a>
                 </div>
             </div>
     </div>

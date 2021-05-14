@@ -44,7 +44,7 @@
     <%  
      int cunt=0;
      for(Cheq cheq:list)
-     {    
+     {    if(cheq.getCheqStatus()==1)
            cunt++;}
     %>
     <div class="container">
@@ -103,7 +103,7 @@
                                                 <div class="form-group" style="padding-left: 30px; padding-right: 30px">
                                             
                                             <h3 class="text-center " >Checkbook Status Sheet</h3>
-                                            <small id="emailHelp" class="form-text text-muted text-center">Total <%=cunt%> Checkbook Requests  </small><br>
+                                            <small id="emailHelp" class="form-text text-muted text-center">Total <%=cunt%> New Checkbook Requests  </small><br>
                                          
                                                 
                                                 
@@ -126,6 +126,30 @@
                                                 {    
                                                  count++;
                                                 %>
+                                                
+                                                <% if( cheq.getCheqStatus()==1  )
+                                                { %>
+                                                
+                                                <tr style="font-weight:bold">
+                                                    <td><%=count%></td>
+                                                    <td><%=cheq.getCheqt().getUserName()%> </td>
+                                                    <td><%=cheq.getCheqt().getUserId()%> </td>
+                                                    
+                                                    <td><%=cheq.getCheqId()%> </td>
+                                                    <% if(cheq.getCheqStatus()==1)
+                                                       s= "Pending";
+                                                    else if(cheq.getCheqStatus()==2) s="Approved";
+                                                    else
+                                                    s="Rejected";
+                                                    %>
+                                                    <td><%=s%> </td>
+                                                </tr>
+                                                
+                                                
+                                                <%}
+                                                else
+                                                {%>
+                                                
                                                 <tr>
                                                     <td><%=count%></td>
                                                     <td><%=cheq.getCheqt().getUserName()%> </td>
@@ -138,11 +162,10 @@
                                                     else
                                                     s="Rejected";
                                                     %>
-                                                    
                                                     <td><%=s%> </td>
-                                                    
-                                                    
                                                 </tr>
+                                                <%}%>
+                                                
                                               
                                                 
                                               <%   }
