@@ -41,7 +41,7 @@
       List<User> list = dao.getUserDet();
     %>
     <%  
-     int cunt=0;
+     int cunt=-1    ;
      for(User user :list)
      {    
            cunt++;}
@@ -120,6 +120,7 @@
                                                     for(User user:list)
                                                 {    
                                                  count++;
+                                                 if(count>1){
                                                 %>
                                                 <tr>
                                                     <td><%=count%></td>
@@ -139,7 +140,7 @@
                                                 </tr>
                                               
                                                 
-                                              <%   }
+                                              <%   }}
                                                     %>
                                                 </tbody>
                                                 

@@ -88,7 +88,7 @@ public class ReqMServlet extends HttpServlet {
                 HttpSession httpSession = request.getSession();
                 httpSession.setAttribute("message_1", " Unable to Transact Amount due to insufficent funds"  );    
               
-                response.sendRedirect("userservices.jsp");
+                response.sendRedirect("balancesheet.jsp");
                 return;
                 }
                 else{

@@ -62,7 +62,7 @@ public class ReqChServlet extends HttpServlet {
                 
                 Cheq c = new Cheq();
                 c.setCheqConnum(cheqConnum);
-                c.setCheqStatus(0);
+                c.setCheqStatus(1);
                 c.setCheqAdd(cheqAdd);
                 UserDao udao = new UserDao(FactoryProvider.getFactory());
                 User u= udao.getUserById(userIdc);

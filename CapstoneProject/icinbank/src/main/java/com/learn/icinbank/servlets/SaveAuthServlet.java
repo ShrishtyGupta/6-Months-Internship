@@ -60,7 +60,7 @@ public class SaveAuthServlet extends HttpServlet {
                
  httpSession.setAttribute("message", "Status Updated Succcessfully!"  );    
               
-                response.sendRedirect("primauth.jsp");
+                response.sendRedirect("saveauth.jsp");
                
                 return;
                 
