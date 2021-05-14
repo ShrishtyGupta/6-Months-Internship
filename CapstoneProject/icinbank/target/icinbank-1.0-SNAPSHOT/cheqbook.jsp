@@ -107,9 +107,9 @@
                                                 %>
                                                 <tr>
                                                     <td><%=count%></td>
-                                                    <% if(cheq.getCheqStatus()==0)
+                                                    <% if(cheq.getCheqStatus()==1)
                                                        s= "In Process";
-                                                    else if(cheq.getCheqStatus()==1) s="Issued";
+                                                    else if(cheq.getCheqStatus()==2) s="Issued";
                                                     else
                                                     s="Rejected";
                                                     %>

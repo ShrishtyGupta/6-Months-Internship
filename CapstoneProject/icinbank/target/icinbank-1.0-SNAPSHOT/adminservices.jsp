@@ -54,7 +54,7 @@
                 <!--second :row first col-->
                 <div class="col-md-6">
 
-<a href="adminuserauth.jsp" style="hover{text-decoration: none; }">
+<a href="auth.jsp" style="hover{text-decoration: none; }">
                     <div class="card" data-toggle="modal" data-target="#add-category-modal">
 
                         <div class="card-body text-center">
@@ -64,7 +64,7 @@
 
                             </div> 
 
-                            <p class="mt-2">Click here to Authenticate User and User Accounts </p>
+                            <p class="mt-2" style="color:#000">Click here to Authenticate User and User Accounts </p>
                             <h1 class="text-uppercase text-muted"> User <br>Authentication </h1>
 
                         </div>
