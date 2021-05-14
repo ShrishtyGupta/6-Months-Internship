@@ -55,26 +55,30 @@
                    <!--card-->
         <div class="card">
         <div class="card-body">
-        <%@include file="message.jsp" %>
+        
                             
         <form action="PrimAuthServlet" method="post">
         <div class="form-group">
-        <h3 class="text-center mb-5">Update User Access</h3>
-        <label for="user_id">User ID</label>
-        <input  name="user_id" type="text" class="form-control" id="user_id"  >
+        <h3 class="text-center mb-5">Update Primary Account Access</h3>
+        <%@include file="message.jsp" %>
+        <label for="pacct_user_id">User ID</label>
+        <input  name="pacct_user_id" type="text" class="form-control" id="pacct_user_id"  >
         <small id="emailHelp" class="form-text text-muted">Enter ID of User</small>
         </div>
-                                
-
+            <div>                         
+<label for="pacc_id">Primary Account ID</label>
+        <input  name="pacc_id" type="text" class="form-control" id="pacc_id"  >
+        <small id="emailHelp" class="form-text text-muted">Enter ID of Primary Account User</small><br>
+        </div>
 
         
 
 
         <div class="form-group">
-        <label for="user_status" >Update Status</label>
-        <select class="form-control" id="user_statuss" name="user_status">
+        <label for="pacc_status" >Update Status</label>
+        <select class="form-control" id="pacc_status" name="pacc_status">
   <option value="1">1-Active</option>
-  <option value="2">0-Blocked</option>
+  <option value="0">0-Blocked</option>
  
     
 </select>

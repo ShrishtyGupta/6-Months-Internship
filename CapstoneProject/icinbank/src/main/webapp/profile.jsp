@@ -13,7 +13,7 @@
     User userp = (User) session.getAttribute("current-user");
     if (userp == null) {
 
-        session.setAttribute("message", "You are not logged in !! Login first to access checkbook page");
+        session.setAttribute("message", "You are not logged in !! Login first to access user profile page");
         response.sendRedirect("login.jsp");
         return;
 

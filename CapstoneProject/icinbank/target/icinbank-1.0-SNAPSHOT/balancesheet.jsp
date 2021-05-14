@@ -62,13 +62,14 @@
                                                 <thead  style="background:#0b2239; color:#fff">   
                                                 <tr>
                                                     <th scope="col">#</th>
-                                                     <th scope="col">   Transaction ID</th>
-                                                    <th scope="col">Date</th>
-                                                     <th scope="col">Amount</th>
-                                                      <th scope="col">Rcp Name</th>
-                                                       <th scope="col">Rcp Bank Name</th>
-                                                       <th scope="col">Rcp IFSC</th>
-                                                       <th scope="col">Rcp Acc No.</th>
+                                                    <th scope="col">Transaction ID</th>
+                                                      <th scope="col">Transaction Status</th>
+                                                    <th scope="col">Transaction Date</th>
+                                                     <th scope="col">Transaction Amount</th>
+                                                      <th scope="col">Beneficiary Name</th>
+                                                       <th scope="col">Beneficiary Bank Name</th>
+                                                       <th scope="col">Beneficiary IFSC</th>
+                                                       <th scope="col">Beneficiary Acc No.</th>
                                                 </tr>    
                                                 </thead>
                                                
@@ -83,6 +84,10 @@
                                                     <td><%=cont%></td>
                                                    
                                                     <td><%=trans.getTransId()%> </td>
+                                                    <%if (trans.isTransStatus()==true){%>
+                                                    <td>Successful</td>
+                                                     <%}else {%>
+                                                     <td>Unsuccessful</td><% }%>
                                                     <td><%=trans.getTransDate()%> </td>
                                                     <td><%=trans.getTransAmt()%> </td>
                                                     <td><%=trans.getTransName()%> </td>

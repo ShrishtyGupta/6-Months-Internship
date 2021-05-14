@@ -5,12 +5,17 @@
  */
 package com.learn.icinbank.servlets;
 
+import com.learn.icinbank.helper.FactoryProvider;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 /**
  *
@@ -31,16 +36,41 @@ public class SaveAuthServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet SaveAuthServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet SaveAuthServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+          try {
+                                int sacct_user_id = Integer.parseInt(request.getParameter("sacct_user_id"));
+                               int sacc_id = Integer.parseInt(request.getParameter("sacc_id"));
+                                int sacc_status =  Integer.parseInt(request.getParameter("sacc_status"));
+                               
+                // validations
+
+                           
+                   Session s = FactoryProvider.getFactory().openSession();
+                Transaction tx = s.beginTransaction(); 
+                Query q=s.createQuery("update SaveAcc set saccStatus=:p where saccId=:i");
+                
+                q.setParameter("p",sacc_status);
+                q.setParameter("i",sacc_id);
+                q.executeUpdate();
+                tx.commit();
+                s.close();   
+               
+             
+               
+                HttpSession httpSession = request.getSession();
+               
+ httpSession.setAttribute("message", "Status Updated Succcessfully!"  );    
+              
+                response.sendRedirect("primauth.jsp");
+               
+                return;
+                
+                
+            } catch (Exception e) {
+                e.printStackTrace();
+                
+                
+                
+            }
         }
     }
 

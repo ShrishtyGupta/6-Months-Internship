@@ -5,12 +5,21 @@
  */
 package com.learn.icinbank.servlets;
 
+import com.learn.icinbank.dao.PrimAccDao;
+import com.learn.icinbank.dao.UserDao;
+import com.learn.icinbank.entities.PrimAcc;
+import com.learn.icinbank.entities.User;
+import com.learn.icinbank.helper.FactoryProvider;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 /**
  *
@@ -31,16 +40,41 @@ public class PrimAuthServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet PrimAuthServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet PrimAuthServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+          try {
+                                int pacct_user_id = Integer.parseInt(request.getParameter("pacct_user_id"));
+                               int pacc_id = Integer.parseInt(request.getParameter("pacc_id"));
+                                int pacc_status =  Integer.parseInt(request.getParameter("pacc_status"));
+                               
+                // validations
+
+                           
+                   Session s = FactoryProvider.getFactory().openSession();
+                Transaction tx = s.beginTransaction(); 
+                Query q=s.createQuery("update PrimAcc set paccStatus=:p where paccId=:i");
+                
+                q.setParameter("p",pacc_status);
+                q.setParameter("i",pacc_id);
+                q.executeUpdate();
+                tx.commit();
+                s.close();   
+               
+             
+               
+                HttpSession httpSession = request.getSession();
+               
+ httpSession.setAttribute("message", "Status Updated Succcessfully!"  );    
+              
+                response.sendRedirect("primauth.jsp");
+               
+                return;
+                
+                
+            } catch (Exception e) {
+                e.printStackTrace();
+                
+                
+                
+            }
         }
     }
 

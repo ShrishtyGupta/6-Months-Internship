@@ -21,7 +21,7 @@
     User userd = (User) session.getAttribute("current-user");
     if (userd == null) {
 
-        session.setAttribute("message", "You are not logged in !! Login first to access checkbook page");
+        session.setAttribute("message", "You are not logged in !! Login first to access deposit services");
         response.sendRedirect("login.jsp");
         return;
 
@@ -59,6 +59,9 @@
             <%       for(PrimAcc primacc:plist)
                         { if(primacc.getPacct().getUserId()==userd.getUserId()){
             %>
+            
+            <input  name="pacc_status" type="hidden" class="form-control" id="pacc_status" value="<%=primacc.getPaccStatus()%>" >
+
             <input  name="pacc_bal" type="hidden" class="form-control" id="pacc_bal" value="<%=primacc.getPaccBal()%>" >
             <small id="emailHelp" class="form-text text-muted text-center">You have INR <%=primacc.getPaccBal()%> Primary balance </small><br>
             <%
@@ -69,7 +72,9 @@
             <input  name="pacct_user_id" type="text" class="form-control" id="pacct_user_id" value="<%=userd.getUserId()%>" >
             <small id="emailHelp" class="form-text text-muted">Do not change this ID.</small>
         </div>
+            
         <div class="form-group">
+        
             <label for="pacc_id">Account ID</label>
             <input  name="pacc_id" type="text" class="form-control" id="pacc_id" value="<%=userd.getUserId()%>" >
         </div>
@@ -96,7 +101,9 @@
             <%       for(SaveAcc saveacc:slist)
                         { if(saveacc.getSacct().getUserId()==userd.getUserId()){
             %>
-             <input  name="sacc_bal" type="hidden" class="form-control" id="pacc_bal" value="<%=saveacc.getSaccBal()%>" >
+                        <input  name="sacc_status" type="hidden" class="form-control" id="sacc_status" value="<%=saveacc.getSaccStatus()%>" >
+          
+            <input  name="sacc_bal" type="hidden" class="form-control" id="pacc_bal" value="<%=saveacc.getSaccBal()%>" >
             <small id="emailHelp" class="form-text text-muted text-center">You have INR <%=saveacc.getSaccBal()%> Savings balance </small><br>
             <%
                 }}

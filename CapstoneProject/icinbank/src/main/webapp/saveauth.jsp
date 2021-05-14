@@ -55,26 +55,30 @@
                    <!--card-->
         <div class="card">
         <div class="card-body">
-        <%@include file="message.jsp" %>
+        
                             
         <form action="SaveAuthServlet" method="post">
         <div class="form-group">
-        <h3 class="text-center mb-5">Update User Access</h3>
-        <label for="user_id">User ID</label>
-        <input  name="user_id" type="text" class="form-control" id="user_id"  >
+        <h3 class="text-center mb-5">Update Savings Account Access</h3>
+        <%@include file="message.jsp" %>
+        <label for="sacct_user_id">User ID</label>
+        <input  name="sacct_user_id" type="text" class="form-control" id="sacct_user_id"  >
         <small id="emailHelp" class="form-text text-muted">Enter ID of User</small>
         </div>
-                                
-
+            <div>                         
+<label for="sacc_id">Savings Account ID</label>
+        <input  name="sacc_id" type="text" class="form-control" id="sacc_id"  >
+        <small id="emailHelp" class="form-text text-muted">Enter ID of Savings Account User</small><br>
+        </div>
 
         
 
 
         <div class="form-group">
-        <label for="user_status" >Update Status</label>
-        <select class="form-control" id="user_statuss" name="user_status">
+        <label for="sacc_status" >Update Status</label>
+        <select class="form-control" id="sacc_status" name="sacc_status">
   <option value="1">1-Active</option>
-  <option value="2">0-Blocked</option>
+  <option value="0">0-Blocked</option>
  
     
 </select>
@@ -99,7 +103,7 @@
                                                 <div class="form-group" style="padding-left: 30px; padding-right: 30px">
                                             
                                             <h3 class="text-center " >Savings Account Status Sheet</h3>
-                                            <small id="emailHelp" class="form-text text-muted text-center">Total <%=cunt%> Saveary Account Users  </small><br>
+                                            <small id="emailHelp" class="form-text text-muted text-center">Total <%=cunt%> Savings Account Users  </small><br>
                                          
                                                 
                                                 

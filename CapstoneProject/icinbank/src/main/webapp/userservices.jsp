@@ -1,4 +1,26 @@
 <%@page import="com.learn.icinbank.entities.User"%>
+<%@page import="com.learn.icinbank.entities.PrimAcc"%>
+<%@page import="com.learn.icinbank.dao.PrimAccDao"%>
+<%@page import="com.learn.icinbank.dao.SaveAccDao"%>
+<%@page import="java.util.List"%>
+<%@page import="com.learn.icinbank.dao.UserDao"%>
+<%@page import="com.learn.icinbank.dao.SaveAccDao"%>
+<%@page import="com.learn.icinbank.dao.PrimAccDao"%>
+<%@page import="com.learn.icinbank.helper.FactoryProvider"%>
+<%@page import="com.learn.icinbank.entities.User"%>
+<%@page import="com.learn.icinbank.entities.PrimAcc"%>
+<%@page import="com.learn.icinbank.entities.SaveAcc"%>
+<%@page import="com.learn.icinbank.entities.User"%>
+<%@page import="com.learn.icinbank.entities.PrimAcc"%>
+<%@page import="com.learn.icinbank.entities.SaveAcc"%>
+<%@page import="java.util.List"%>
+<%@page import="com.learn.icinbank.entities.Trans"%>
+<%@page import="com.learn.icinbank.dao.UserDao"%>
+<%@page import="com.learn.icinbank.dao.PrimAccDao"%>
+<%@page import="com.learn.icinbank.dao.SaveAccDao"%>
+<%@page import="com.learn.icinbank.helper.FactoryProvider"%>
+<%@page import="com.learn.icinbank.entities.User"%>
+
 <%
 
     User useru = (User) session.getAttribute("current-user");
@@ -9,6 +31,14 @@
         return;
 
     }
+    if(useru.getUserType().equals("normal")) {
+        if(useru.getUserStatus()==0 ){session.setAttribute("message", "Your account is blocked");
+        response.sendRedirect("login.jsp");
+        return;}
+        
+    }
+
+    
     
     
 %>
@@ -20,8 +50,13 @@
         <title> <%=useru.getUserName()%>'s Services </title>
         <%@include file="components/common_css_js.jsp" %>
     </head>
-    <body style="background: #0b2239
-          ">
+    <body style="background: #0b2239">
+         <%
+                
+                PrimAccDao pdao=new PrimAccDao(FactoryProvider.getFactory());
+                List<PrimAcc> plist = pdao.getPrimAcc();
+                
+    %> 
         <%@include file="components/navbar.jsp" %><br><br><br>
       
         <div class="container admin">
@@ -31,7 +66,7 @@
                 
             </div>
 
-
+ <%@include file="message_1.jsp" %>
 
 
             <div class="row mt-3">
@@ -130,7 +165,7 @@
 
                             </div> 
 
-                            <p class="mt-2">Click here to Deposit Money </p>
+                            <p class="mt-2" style="color:#000">Click here to Deposit Money </p>
                             <h1 class="text-uppercase text-muted"> DEPOSIT MONEY </h1>
 
                         </div>
@@ -177,158 +212,22 @@
 
 
         <!-- Modal -->
-        <div class="modal fade" id="add-category-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header custom-bg text-white">
-                        <h5 class="modal-title" id="exampleModalLabel">Fill category details</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="ProductOperationServlet" method="post">
-
-                            <input type="hidden" name="operation" value="addcategory">
-
-
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="catTitle" placeholder="Enter category title" required />
-
-                            </div>
-
-
-                            <div class="form-group">
-                                <textarea style="height: 300px;" class="form-control" placeholder="Enter category description" name="catDescription" required></textarea>
-
-                            </div>
-
-                            <div class="cotnainer text-center">
-
-                                <button class="btn btn-outline-success">Add Category</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-                            </div>
-
-
-
-                        </form>
+      
 
 
 
 
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-
-
-
-        <!--End add category modal-->
-
-        <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-
-        <!--product modal-->
+       
 
         <!-- Modal -->
-        <div class="modal fade" id="add-product-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Product details</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <!--form-->
-
-                        <form action="ProductOperationServlet" method="post" enctype="multipart/form-data">
-
-                            <input type="hidden" name="operation" value="addproduct"/>
-
-                            <!--product title-->
-
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Enter title of product" name="pName" required />
-                            </div>
-
-                            <!--product description-->
-
-                            <div class="form-group">
-                                <textarea style="height: 150px;" class="form-control" placeholder="Enter product description" name="pDesc"></textarea>
-
-                            </div>
-
-                            <!--product price-->
-
-                            <div class="form-group">
-                                <input type="number" class="form-control" placeholder="Enter price of product" name="pPrice" required />
-                            </div>
-
-                            <!--product discount-->
-
-                            <div class="form-group">
-                                <input type="number" class="form-control" placeholder="Enter product discount" name="pDiscount" required />
-                            </div>
-
-
-                            <!--product quantity-->
-
-                            <div class="form-group">
-                                <input type="number" class="form-control" placeholder="Enter product Quantity" name="pQuantity" required />
-                            </div>
-
-
-                            <!--product category-->
-
-                        
-
-
-                            <div class="form-group">
-                                
-
-                            </div>
-
-
-
-                            <!--product file-->
-
-                            <div class="form-group">
-                                <label for="pPic">Select Picture of product</label>  
-                                <br>
-                                <input type="file" id="pPic" name="pPic" required />
-
-                            </div>
-
-
-                            <!--submit button-->
-                            <div class="container text-center">
-
-                                <button class="btn btn-outline-success">Add product</button>
-
-                            </div>
-
-
-
-                        </form>
-                        <!--end form-->
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+      
         
         
         <div class="modal fade" id="trans-money-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document" style="height:450px; width: 650px">
                 <div class="modal-content">
                     <div class="modal-header  text-white" style="background: #0b2239">
-                        <h5 class="modal-title" id="exampleModalLabel">Transfer Money</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Transfer Money from Primary Account</h5>
                         <button type="button" style="color: #fff" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -337,8 +236,16 @@
                         <form action="ReqMServlet" method="post">
                              <div class="row " >
                             <%@include file="message.jsp" %>
-                            
-                            
+     <%       for(PrimAcc primacc:plist)
+                        { if(primacc.getPacct().getUserId()==useru.getUserId()){
+            %>  
+                        <input  name="pacc_id" type="hidden" class="form-control" id="pacc_id" value="<%=primacc.getPaccId()%>">
+
+            <input  name="pacc_status" type="hidden" class="form-control" id="pacc_status" value="<%=primacc.getPaccStatus()%>">
+            <input  name="pacc_bal" type="hidden" class="form-control" id="pacc_bal" value="<%=primacc.getPaccBal()%>">
+<%
+                }}
+            %>
                                 <div class="form-group" style="padding-left: 50px">
                                    
                                     <label for="transtt_user_id">Your User ID</label>
@@ -352,7 +259,7 @@
                                    
                                     <label for="trans_Amt">Transaction Amount</label>
                                     <input  name="trans_Amt" type="text" class="form-control" id="trans_Amt" >
-                                    <small id="emailHelp" class="form-text text-muted">Currency Indian National Rupee</small>
+                                    <small id="emailHelp" class="form-text text-muted">Amount should be less than Primary Account Balance</small>
                                 </div><br>
                                 
                         </div>

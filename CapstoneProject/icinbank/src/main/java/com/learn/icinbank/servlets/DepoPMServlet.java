@@ -41,14 +41,15 @@ public class DepoPMServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-     try {
+     try {                      int pacc_status = Integer.parseInt(request.getParameter("pacc_status"));
                                 int pacct_user_id = Integer.parseInt(request.getParameter("pacct_user_id"));
                                int pacc_id = Integer.parseInt(request.getParameter("pacc_id"));
                                 int pacc_balnew = Integer.parseInt(request.getParameter("pacc_balnew"));
                                 int pacc_bal = Integer.parseInt(request.getParameter("pacc_bal"));  
                                int x=pacc_bal+pacc_balnew;
              
-                
+                if(pacc_status==1)
+                {
                 Session s = FactoryProvider.getFactory().openSession();
                 Transaction tx = s.beginTransaction(); 
                 Query q=s.createQuery("update PrimAcc set paccBal=:p where paccId=:i");
@@ -66,6 +67,20 @@ public class DepoPMServlet extends HttpServlet {
               
                 response.sendRedirect("depositmoney.jsp");
                 return;
+                
+                
+                
+                }
+                else
+                        {
+                        HttpSession httpSession = request.getSession();
+                
+                httpSession.setAttribute("message", "Blocked ! Your Primary Account is Blocked! Contact Admin to get Unblocked! "  );    
+              
+                response.sendRedirect("depositmoney.jsp");
+                return;
+                        }
+                        
                 
                 
             } catch (Exception e) {
