@@ -57,7 +57,7 @@
         <div class="card-body">
         <%@include file="message.jsp" %>
                             
-        <form action="UpdateUserServlet" method="post">
+        <form action="PrimAuthServlet" method="post">
         <div class="form-group">
         <h3 class="text-center mb-5">Update User Access</h3>
         <label for="user_id">User ID</label>
@@ -130,7 +130,7 @@
                                                     <td><%=p.getPaccId()%> </td>
                                                     
                                                   
-                                                    <% if(p.isPaccStatus()==false)
+                                                    <% if(p.getPaccStatus()==0)
                                                        s= "Blocked";
                                                     
                                                     else s="Active";

@@ -40,11 +40,11 @@ public class RegisterServlet extends HttpServlet {
                 }
                 //creating user object to store data
                 
-                User user = new User(userName, userEmail, userPassword, userPhone, userAddress, "normal", true);
+                User user = new User(userName, userEmail, userPassword, userPhone, userAddress, "normal", 1);
                 java.util.Date date=new java.util.Date();  
                 Cheq cheqq = new Cheq(1, user, userAddress, userPhone); 
-                PrimAcc paccss = new PrimAcc(0,user,false);
-                SaveAcc saccss = new SaveAcc(0,user,false);
+                PrimAcc paccss = new PrimAcc(0,user,0);
+                SaveAcc saccss = new SaveAcc(0,user,0);
                 Trans transs = new Trans(0,date,"Acc. Activation","Acc. Activation",user,true,userName,"Acc. Activation" );
                 Session hibernateSession = FactoryProvider.getFactory().openSession();
                 Transaction tx = hibernateSession.beginTransaction();                

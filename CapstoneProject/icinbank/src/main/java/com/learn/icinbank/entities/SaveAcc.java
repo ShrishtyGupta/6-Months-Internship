@@ -24,16 +24,16 @@ public class SaveAcc {
     private User sacct;
 
     @Column(name="sacc_status")
-    private boolean saccStatus;
+    private int saccStatus;
 
-    public SaveAcc(int saccId, int saccBal, User sacct, boolean saccStatus) {
+    public SaveAcc(int saccId, int saccBal, User sacct, int saccStatus) {
         this.saccId = saccId;
         this.saccBal = saccBal;
         this.sacct = sacct;
         this.saccStatus = saccStatus;
     }
 
-    public SaveAcc(int saccBal, User sacct, boolean saccStatus) {
+    public SaveAcc(int saccBal, User sacct, int saccStatus) {
         this.saccBal = saccBal;
         this.sacct = sacct;
         this.saccStatus = saccStatus;
@@ -68,11 +68,11 @@ public class SaveAcc {
         this.sacct = sacct;
     }
 
-    public boolean isSaccStatus() {
+    public int getSaccStatus() {
         return saccStatus;
     }
 
-    public void setSaccStatus(boolean saccStatus) {
+    public void setSaccStatus(int saccStatus) {
         this.saccStatus = saccStatus;
     }
 

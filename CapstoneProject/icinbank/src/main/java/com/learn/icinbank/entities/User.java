@@ -36,7 +36,7 @@ public class User {
     @Column(name="user_type")
     private String userType;
     @Column(name="user_status")
-    private boolean userStatus;
+    private int userStatus;
     @OneToMany(mappedBy="cheqt")
     private List<Cheq> cheqs = new ArrayList<>();
       @OneToMany(mappedBy="pacct")
@@ -50,7 +50,7 @@ public class User {
         this.userId = userId;
     }
 
-    public User(int userId, String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType, boolean userStatus) {
+    public User(int userId, String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType, int userStatus) {
         this.userId = userId;
         this.userName = userName;
         this.userEmail = userEmail;
@@ -61,7 +61,7 @@ public class User {
         this.userStatus = userStatus;
     }
 
-    public User( String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType, boolean userStatus) {
+    public User( String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType, int userStatus) {
         
         this.userName = userName;
         this.userEmail = userEmail;
@@ -73,7 +73,7 @@ public class User {
     }
 
     
-    public User(int userId, String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType, boolean userStatus, List<Cheq> cheqs, List<PrimAcc>paccs,List<SaveAcc>saccs, List<Trans> transs) {
+    public User(int userId, String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType, int userStatus, List<Cheq> cheqs, List<PrimAcc>paccs,List<SaveAcc>saccs, List<Trans> transs) {
         this.userId = userId;
         this.userName = userName;
         this.userEmail = userEmail;
@@ -92,7 +92,7 @@ public class User {
         
     }
 
-    public User(String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType,boolean userStatus,List<Cheq> cheqs, List<PrimAcc>paccs,List<SaveAcc>saccs, List<Trans> transs) {
+    public User(String userName, String userEmail, String userPassword, String userPhone, String userAddress, String userType,int userStatus,List<Cheq> cheqs, List<PrimAcc>paccs,List<SaveAcc>saccs, List<Trans> transs) {
         this.userName = userName;
         this.userEmail = userEmail;
         this.userPassword = userPassword;
@@ -165,11 +165,11 @@ public class User {
         this.userType = userType;
     }
 
-    public boolean isUserStatus() {
+    public int getUserStatus() {
         return userStatus;
     }
 
-    public void setUserStatus(boolean userStatus) {
+    public void setUserStatus(int userStatus) {
         this.userStatus = userStatus;
     }
 

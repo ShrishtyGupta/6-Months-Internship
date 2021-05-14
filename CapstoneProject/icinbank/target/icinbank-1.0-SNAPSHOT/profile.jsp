@@ -41,7 +41,7 @@
                 List<SaveAcc> slist = sdao.getSaveAcc();
           %> 
         <% String sx="Active";
-                    if(userp.isUserStatus()!=true)
+                    if(userp.getUserStatus()!=1)
                     {sx="Inactive"; }%>
           
         <div class="container">
@@ -84,7 +84,7 @@
                             %>
                     <h5 class="text-justify ">ACCOUNT ID : <%=primacc.getPaccId()%></h5>
                     <h5 class="text-justify " >ACCOUNT BALANCE : <%=primacc.getPaccBal()%> </h5>
-                    <% if(primacc.isPaccStatus()==true)
+                    <% if(primacc.getPaccStatus()==1)
                         s="Activated";
                     else
                         s="Not Activated";%>
@@ -110,7 +110,7 @@
                             %>
                     <h5 class="text-justify ">ACCOUNT ID : <%=saveacc.getSaccId()%></h5>
                     <h5 class="text-justify " >ACCOUNT BALANCE : <%=saveacc.getSaccBal()%> </h5>
-                    <% if(saveacc.isSaccStatus()==true)
+                    <% if(saveacc.getSaccStatus()==1)
                         ss="Activated";
                     else
                         ss="Not Activated";%>

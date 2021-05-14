@@ -24,16 +24,16 @@ public class PrimAcc {
     private User pacct;
 
     @Column(name="pacc_status")
-    private boolean paccStatus;
+    private int paccStatus;
 
-    public PrimAcc(int paccId, int paccBal, User pacct, boolean paccStatus) {
+    public PrimAcc(int paccId, int paccBal, User pacct, int paccStatus) {
         this.paccId = paccId;
         this.paccBal = paccBal;
         this.pacct = pacct;
         this.paccStatus = paccStatus;
     }
 
-    public PrimAcc(int paccBal, User pacct, boolean paccStatus) {
+    public PrimAcc(int paccBal, User pacct, int paccStatus) {
         this.paccBal = paccBal;
         this.pacct = pacct;
         this.paccStatus = paccStatus;
@@ -66,11 +66,11 @@ public class PrimAcc {
         this.pacct = pacct;
     }
 
-    public boolean isPaccStatus() {
+    public int getPaccStatus() {
         return paccStatus;
     }
 
-    public void setPaccStatus(boolean paccStatus) {
+    public void setPaccStatus(int paccStatus) {
         this.paccStatus = paccStatus;
     }
 

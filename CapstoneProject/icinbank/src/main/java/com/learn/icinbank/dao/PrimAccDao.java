@@ -22,10 +22,7 @@ public class PrimAccDao {
     }
     
     
-    
-    
-    
-    
+   
     
     public boolean savePrimAcc(PrimAcc ch){
         boolean f=false;
