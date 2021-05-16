@@ -101,7 +101,7 @@
             <%       for(SaveAcc saveacc:slist)
                         { if(saveacc.getSacct().getUserId()==userd.getUserId()){
             %>
-                        <input  name="sacc_status" type="hidden" class="form-control" id="sacc_status" value="<%=saveacc.getSaccStatus()%>" >
+                        <input  name="sacc_status" type="hidden" class="form-control" id="sacc_status" value="<%=saveacc.getSaccStatus()%>"  >
           
             <input  name="sacc_bal" type="hidden" class="form-control" id="pacc_bal" value="<%=saveacc.getSaccBal()%>" >
             <small id="emailHelp" class="form-text text-muted text-center">You have INR <%=saveacc.getSaccBal()%> Savings balance </small><br>
@@ -110,12 +110,12 @@
             %>
             <%@include file="message_1.jsp" %>
             <label for="sacct_user_id">User ID</label>
-            <input  name="sacct_user_id" type="text" class="form-control" id="sacct_user_id" value="<%=userd.getUserId()%>" >
-            <small id="emailHelp" class="form-text text-muted">Do not change this ID.</small>
+            <input  name="sacct_user_id" type="text" class="form-control" id="sacct_user_id" value="<%=userd.getUserId()%>" readonly>
+            <small id="emailHelp" class="form-text text-muted">This is your unique ICIN user ID.</small>
         </div>
         <div class="form-group">
             <label for="sacc_id">Account ID</label>
-            <input  name="sacc_id" type="text" class="form-control" id="sacc_id" value="<%=userd.getUserId()%>" >
+            <input  name="sacc_id" type="text" class="form-control" id="sacc_id" value="<%=userd.getUserId()%>" readonly >
         </div>
         <div class="form-group">
             <label for="sacc_balnew">Amount</label>
