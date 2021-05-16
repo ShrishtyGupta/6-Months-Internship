@@ -249,7 +249,7 @@
                                 <div class="form-group" style="padding-left: 50px">
                                    
                                     <label for="transtt_user_id">Your User ID</label>
-                                    <input  name="transt_user_id" type="text" class="form-control" id="transt_user_id" value="<%=useru.getUserId()%>">
+                                    <input  name="transt_user_id" type="text" class="form-control" id="transt_user_id" value="<%=useru.getUserId()%>"readonly>
                                     <small id="emailHelp" class="form-text text-muted">Do not change this ID.</small>
                                 </div><br>
                                 

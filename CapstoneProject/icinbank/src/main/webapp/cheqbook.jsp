@@ -49,15 +49,15 @@
                                 <div class="form-group">
                                    <h3 class="text-center mb-5">Request a New Checkbook</h3>
                                     <label for="cheqt_user_id">User ID</label>
-                                    <input  name="cheqt_user_id" type="text" class="form-control" id="cheqt_user_id" value="<%=userc.getUserId()%>" >
-                                    <small id="emailHelp" class="form-text text-muted">Do not change this ID.</small>
+                                    <input  name="cheqt_user_id" type="text" class="form-control" id="cheqt_user_id" value="<%=userc.getUserId()%>" readonly>
+                                    <small id="emailHelp" class="form-text text-muted">This is your unique ICIN user ID.</small>
                                 </div>
                                 
 
 
                                 <div class="form-group">
                                     <label for="cheq_connum">Your contact</label>
-                                    <input name ="cheq_connum" type="text" class="form-control" id="cheq_connum" value="<%=userc.getUserPhone()%>" >
+                                    <input name ="cheq_connum" type="text" class="form-control" id="cheq_connum" value="<%=userc.getUserPhone()%>" readonly  >
                                 </div>
 
 
