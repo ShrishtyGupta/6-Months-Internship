@@ -69,14 +69,14 @@
             %>
             <%@include file="message.jsp" %>
             <label for="pacct_user_id">User ID</label>
-            <input  name="pacct_user_id" type="text" class="form-control" id="pacct_user_id" value="<%=userd.getUserId()%>" >
-            <small id="emailHelp" class="form-text text-muted">Do not change this ID.</small>
+            <input  name="pacct_user_id" type="text" class="form-control" id="pacct_user_id" value="<%=userd.getUserId()%>" readonly>
+            <small id="emailHelp" class="form-text text-muted">This is your unique ICIN Bank ID.</small>
         </div>
             
         <div class="form-group">
         
             <label for="pacc_id">Account ID</label>
-            <input  name="pacc_id" type="text" class="form-control" id="pacc_id" value="<%=userd.getUserId()%>" >
+            <input  name="pacc_id" type="text" class="form-control" id="pacc_id" value="<%=userd.getUserId()%>" readonly >
         </div>
         <div class="form-group">
             <label for="pacc_balnew">Amount</label>
