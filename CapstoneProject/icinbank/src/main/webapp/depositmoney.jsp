@@ -70,7 +70,7 @@
             <%@include file="message.jsp" %>
             <label for="pacct_user_id">User ID</label>
             <input  name="pacct_user_id" type="text" class="form-control" id="pacct_user_id" value="<%=userd.getUserId()%>" readonly>
-            <small id="emailHelp" class="form-text text-muted">This is your unique ICIN Bank ID.</small>
+            <small id="emailHelp" class="form-text text-muted">This is your unique ICIN user ID.</small>
         </div>
             
         <div class="form-group">
